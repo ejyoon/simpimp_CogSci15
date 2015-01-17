@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: simpimp_CogSci15.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: YoonCogSci15.bib
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+You've used 21 entries,
+            6735 wiz_defined-function locations,
+            1373 strings with 15309 characters,
+and the built_in function-call counts, 43978 in all, are:
+= -- 5451
+> -- 360
+< -- 2282
++ -- 2366
+- -- 42
+* -- 2932
+:= -- 8381
+add.period$ -- 90
+call.type$ -- 21
+change.case$ -- 359
+chr.to.int$ -- 0
+cite$ -- 42
+duplicate$ -- 1077
+empty$ -- 1594
+format.name$ -- 620
+if$ -- 8106
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 0
+newline$ -- 539
+num.names$ -- 168
+pop$ -- 656
+preamble$ -- 1
+purify$ -- 83
+quote$ -- 0
+skip$ -- 2763
+stack$ -- 0
+substring$ -- 2548
+swap$ -- 645
+text.length$ -- 41
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1872
+warning$ -- 0
+while$ -- 205
+width$ -- 0
+write$ -- 691
