@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  22 JAN 2015 14:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  23 JAN 2015 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -307,136 +307,105 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
 
-Underfull \vbox (badness 6348) has occurred while \output is active []
+Underfull \hbox (badness 1009) in paragraph at lines 57--58
+\OT1/ptm/m/n/10 derived scales rather than lexically-derived ones []Stiller,
+ []
 
- [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Underfull \hbox (badness 1331) in paragraph at lines 59--60
+[]\OT1/ptm/m/n/10 There are still many re-main-ing ques-tions about chil-
+ []
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-Underfull \vbox (badness 4279) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
  [2]
-[3] <figures/140521-simpimp_age-edit.pdf, id=15, 647.47597pt x 325.35652pt>
+<figures/140521-simpimp_age-edit.pdf, id=13, 647.47597pt x 325.35652pt>
 File: figures/140521-simpimp_age-edit.pdf Graphic file (type pdf)
 
 <use figures/140521-simpimp_age-edit.pdf>
 Package pdftex.def Info: figures/140521-simpimp_age-edit.pdf used on input line
- 112.
+ 104.
 (pdftex.def)             Requested size: 505.89pt x 254.20897pt.
 
-<figures/table.pdf, id=16, 698.2997pt x 258.37389pt>
-File: figures/table.pdf Graphic file (type pdf)
- <use figures/table.pdf>
-Package pdftex.def Info: figures/table.pdf used on input line 121.
-(pdftex.def)             Requested size: 252.94499pt x 93.59012pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 121--122
- [] 
- []
+LaTeX Warning: Reference `fig:table' on page 3 undefined on input line 108.
 
-<figures/150116-0-rt_age.pdf, id=17, 407.05013pt x 255.8893pt>
+<figures/150116-0-rt_age.pdf, id=14, 407.05013pt x 255.8893pt>
 File: figures/150116-0-rt_age.pdf Graphic file (type pdf)
 
 <use figures/150116-0-rt_age.pdf>
-Package pdftex.def Info: figures/150116-0-rt_age.pdf used on input line 131.
+Package pdftex.def Info: figures/150116-0-rt_age.pdf used on input line 134.
 (pdftex.def)             Requested size: 252.94499pt x 159.01285pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 131--132
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 134--135
  [] 
  []
 
 
-<figures/140521-simpimp_age_targAtOnset-edit.pdf, id=18, 558.92413pt x 297.6449
+<figures/140521-simpimp_age_targAtOnset-edit.pdf, id=15, 558.92413pt x 297.6449
 9pt>
 File: figures/140521-simpimp_age_targAtOnset-edit.pdf Graphic file (type pdf)
  <use figures/140521-simpimp_age_targAtOnset-edit.pdf>
 Package pdftex.def Info: figures/140521-simpimp_age_targAtOnset-edit.pdf used o
-n input line 140.
+n input line 143.
 (pdftex.def)             Requested size: 252.94499pt x 134.69745pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 140--141
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 143--144
  [] 
  []
 
-[4 <./figures/table.pdf> <./figures/150116-0-rt_age.pdf>]
-Underfull \hbox (badness 1354) in paragraph at lines 147--148
+
+Underfull \hbox (badness 1354) in paragraph at lines 150--151
 []\OT1/ptm/m/n/10 One pos-si-ble cause of this pat-tern is the dif-fer-en-tial
  []
 
-
-Underfull \hbox (badness 1466) in paragraph at lines 151--152
+[3 <./figures/150116-0-rt_age.pdf>]
+Underfull \hbox (badness 1466) in paragraph at lines 154--155
 []\OT1/ptm/m/n/10 Given this po-ten-tial is-sue with in-hibitory con-trol for
  []
 
-[5 <./figures/140521-simpimp_age-edit.pdf> <./figures/140521-simpimp_age_targAt
-Onset-edit.pdf
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./figures/140521-simpimp_age-edit.pdf> <./figures/140521-simpimp_age_targA
+tOnset-edit.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./figures/140521-simpimp_age_targAtO
 nset-edit.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
->] <figures/150116-scmN1-accuracy1.pdf, id=251, 616.42056pt x 218.416pt>
-File: figures/150116-scmN1-accuracy1.pdf Graphic file (type pdf)
-
-<use figures/150116-scmN1-accuracy1.pdf>
-Package pdftex.def Info: figures/150116-scmN1-accuracy1.pdf used on input line 
-178.
-(pdftex.def)             Requested size: 505.89pt x 179.25224pt.
-
-<figures/150116-scmN1-accuracy.pdf, id=252, 661.0579pt x 191.114pt>
-File: figures/150116-scmN1-accuracy.pdf Graphic file (type pdf)
-
-<use figures/150116-scmN1-accuracy.pdf>
-Package pdftex.def Info: figures/150116-scmN1-accuracy.pdf used on input line 1
-79.
-(pdftex.def)             Requested size: 505.89pt x 146.25713pt.
-
-<figures/150116-scmN1-rt_age1.pdf, id=253, 537.77383pt x 269.80798pt>
-File: figures/150116-scmN1-rt_age1.pdf Graphic file (type pdf)
-
-<use figures/150116-scmN1-rt_age1.pdf>
-Package pdftex.def Info: figures/150116-scmN1-rt_age1.pdf used on input line 19
-9.
-(pdftex.def)             Requested size: 252.94499pt x 126.90445pt.
-
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 199--200
- [] 
- []
-
-<figures/150116-scmN1-rt_age2.pdf, id=254, 602.60423pt x 189.508pt>
-File: figures/150116-scmN1-rt_age2.pdf Graphic file (type pdf)
-
-<use figures/150116-scmN1-rt_age2.pdf>
-Package pdftex.def Info: figures/150116-scmN1-rt_age2.pdf used on input line 20
-5.
-(pdftex.def)             Requested size: 505.89pt x 159.09308pt.
- [6] [7 <./figures/150116-scmN1-accuracy1.pdf> <./figures/150116-scmN1-accuracy
-.pdf> <./figures/150116-scmN1-rt_age2.pdf>] (./simpimp_CogSci15.bbl
+>] (./simpimp_CogSci15.bbl
 Underfull \vbox (badness 1558) has occurred while \output is active []
 
- [8 <./figures/150116-scmN1-rt_age1.pdf>]) [9
+ [5])
+[6
 
-] (./simpimp_CogSci15.aux) ) 
+] (./simpimp_CogSci15.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3595 strings out of 493315
- 50644 string characters out of 6137904
- 125552 words of memory out of 5000000
- 6975 multiletter control sequences out of 15000+600000
- 36909 words of font info for 71 fonts, out of 8000000 for 9000
+ 3548 strings out of 493315
+ 49481 string characters out of 6137904
+ 124532 words of memory out of 5000000
+ 6931 multiletter control sequences out of 15000+600000
+ 27637 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,23p,1435b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips
-/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.p
-fb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on simpimp_CogSci15.pdf (9 pages, 1169728 bytes).
+ 38i,9n,23p,997b,257s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on simpimp_CogSci15.pdf (6 pages, 551295 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
