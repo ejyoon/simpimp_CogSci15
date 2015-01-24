@@ -122,37 +122,6 @@ Fernald, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Fernald%
-, Zangl%
-, Portillo%
-\BCBL {}\ \BBA {} Marchman%
-}{%
-Fernald%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2008}}%
-}]{%
-fernald2008looking}
-\APACinsertmetastar {%
-fernald2008looking}%
-\begin{APACrefauthors}%
-Fernald, A.%
-, Zangl, R.%
-, Portillo, A\BPBI L.%
-\BCBL {}\ \BBA {} Marchman, V\BPBI A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2008}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Looking while listening: Using eye movements to monitor
-  spoken language} {Looking while listening: Using eye movements to monitor
-  spoken language}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Developmental psycholinguistics: On-line methods in
-  children's language processing}{}{}{113--132}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Gerardi-Caulton%
 }{%
 Gerardi-Caulton%
@@ -486,7 +455,7 @@ Stiller%
 }{%
 Stiller%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {{\protect \BIP {}}}}%
+{\protect \APACyear {2014}}%
 }]{%
 stillerLLD}
 \APACinsertmetastar {%
@@ -498,7 +467,7 @@ Stiller, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{{\protect \BIP {}}}{}{}.
+\APACrefYearMonthDay{2014}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Ad-hoc Implicature in Preschool Children} {Ad-hoc
   implicature in preschool children}.{\BBCQ}
