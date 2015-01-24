@@ -200,30 +200,6 @@ Grice, H\BPBI P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Horn%
-}{%
-Horn%
-}{%
-{\protect \APACyear {1984}}%
-}]{%
-horn1984toward}
-\APACinsertmetastar {%
-horn1984toward}%
-\begin{APACrefauthors}%
-Horn, L.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1984}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Toward a new taxonomy for pragmatic inference: Q-based
-  and R-based implicature} {Toward a new taxonomy for pragmatic inference:
-  Q-based and r-based implicature}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Meaning, form, and use in context}{42}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Huang%
 \ \BBA {} Snedeker%
 }{%
@@ -252,6 +228,33 @@ Huang, Y\BPBI T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Ito%
+\ \BBA {} Speer%
+}{%
+Ito%
+\ \BBA {} Speer%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+ito2008anticipatory}
+\APACinsertmetastar {%
+ito2008anticipatory}%
+\begin{APACrefauthors}%
+Ito, K.%
+\BCBT {}\ \BBA {} Speer, S\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Anticipatory effects of intonation: Eye movements during
+  instructed visual search} {Anticipatory effects of intonation: Eye movements
+  during instructed visual search}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Memory and Language}{58}{2}{541--573}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Katsos%
 \ \BBA {} Bishop%
 }{%
@@ -276,6 +279,33 @@ Katsos, N.%
   acquisition of informativeness and implicature}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Cognition}{120}{1}{67--81}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kurumada%
+}{%
+Kurumada%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+kurumada1contextual}
+\APACinsertmetastar {%
+kurumada1contextual}%
+\begin{APACrefauthors}%
+Kurumada, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Contextual inferences over speakers' pragmatic
+  intentions: Preschoolers' comprehension of contrastive prosody} {Contextual
+  inferences over speakers' pragmatic intentions: Preschoolers' comprehension
+  of contrastive prosody}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 36th Annual Meeting of the Cognitive
+  Science Society.} {Proceedings of the 36th annual meeting of the cognitive
+  science society.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -450,32 +480,6 @@ Papafragou, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Papafragou%
-\ \BBA {} Tantalou%
-}{%
-Papafragou%
-\ \BBA {} Tantalou%
-}{%
-{\protect \APACyear {2004}}%
-}]{%
-papafragou2004children}
-\APACinsertmetastar {%
-papafragou2004children}%
-\begin{APACrefauthors}%
-Papafragou, A.%
-\BCBT {}\ \BBA {} Tantalou, N.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2004}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Children's computation of implicatures} {Children's
-  computation of implicatures}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Language Acquisition}{12}{1}{71--82}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Stiller%
 , Goodman%
 \BCBL {}\ \BBA {} Frank%
@@ -500,33 +504,6 @@ Stiller, A.%
   implicature in preschool children}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Language Learning and Development}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Sullivan%
-, Davidson%
-\BCBL {}\ \BBA {} Barner%
-}{%
-Sullivan%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2011}}%
-}]{%
-sullivan2011conv}
-\APACinsertmetastar {%
-sullivan2011conv}%
-\begin{APACrefauthors}%
-Sullivan, J.%
-, Davidson, K.%
-\BCBL {}\ \BBA {} Barner, D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2011}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Children's conversational implicatures} {Children's
-  conversational implicatures}.{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {Proceedings of {BUCLD}.} {Proceedings of {BUCLD}.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
