@@ -1,15 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  23 JAN 2015 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_3) (preloaded format=pdflatex 2014.11.23)  24 JAN 2015 20:21
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**simpimp_CogSci15.tex
+**\input simpimp_CogSci15.tex
 (./simpimp_CogSci15.tex
-LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 78 languages loaded.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -25,7 +22,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 ) (./cogsci.sty
 Conference Style for COGSCI -- last modified October 24, 2006
-) (/usr/local/texlive/2013/texmf-dist/tex/latex/pslatex/pslatex.sty
+) (/opt/local/share/texmf-texlive/tex/latex/pslatex/pslatex.sty
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -59,8 +56,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
-)
-(./apacite.sty
+) (./apacite.sty
 Package: apacite 2012/02/25 v6.01 APA citation
 \c@BibCnt=\count87
 \bibleftmargin=\skip43
@@ -68,32 +64,31 @@ Package: apacite 2012/02/25 v6.01 APA citation
 \bibparsep=\skip45
 \bibitemsep=\skip46
 \biblabelsep=\skip47
-)
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+) (/opt/local/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/opt/local/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+(/opt/local/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/opt/local/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -101,39 +96,41 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/05/16 v3.9f The Babel package
+(/opt/local/share/texmf-texlive/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/babel-english/english.ldf
+(/opt/local/share/texmf-texlive/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/05/16 v3.9f Babel common definitions
+(/opt/local/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen105
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip48
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen106
 ))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count90
@@ -174,10 +171,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/placeins/placeins.sty
+(/opt/local/share/texmf-texlive/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/enumitem/enumitem.sty
+(/opt/local/share/texmf-texlive/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip51
 \enit@outerparindent=\dimen115
@@ -188,32 +185,32 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 (./simpimp_CogSci15.aux)
 \openout1 = `simpimp_CogSci15.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 25
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 26
 .
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omspzccm.fd
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 \c@maskedRefs=\count103
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/apacite/english.apc
+(/opt/local/share/texmf-texlive/tex/latex/apacite/english.apc
 File: english.apc 2012/02/25 v6.01 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+(/opt/local/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
 \scratchdimen=\dimen116
@@ -226,15 +223,15 @@ LaTeX Info: Redefining \BHBI on input line 130.
 \MPnumerator=\count108
 \makeMPintoPDFobject=\count109
 \everyMPtoPDFconversion=\toks22
-) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/opt/local/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -243,22 +240,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -270,128 +267,157 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 27
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 28
 .
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 27
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 28
 .
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 27
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 28
 .
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
 
-Underfull \hbox (badness 1515) in paragraph at lines 53--54
+
+LaTeX Warning: Citation `horn1972' undefined on input line 41.
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 45--46
+[]\OT1/ptm/m/n/10 Children's fail-ures on SI com-pu-ta-tion are sur-pris-ing,
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 45--46
+\OT1/ptm/m/n/10 ness of ut-ter-ances. For ex-am-ple, by around the same
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+
+Underfull \hbox (badness 1515) in paragraph at lines 49--50
 \OT1/ptm/m/it/10 hoc \OT1/ptm/m/n/10 im-pli-ca-tures, which de-pend on contextu
 ally-derived
  []
 
-
-Underfull \vbox (badness 1546) has occurred while \output is active []
-
- [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
-] [2]
+]
 
-LaTeX Warning: Reference `fig:table' on page 3 undefined on input line 97.
+LaTeX Warning: Citation `fenson1994' undefined on input line 74.
 
-<figures/150116-0-rt_age.pdf, id=13, 407.05013pt x 255.8893pt>
-File: figures/150116-0-rt_age.pdf Graphic file (type pdf)
-
-<use figures/150116-0-rt_age.pdf>
-Package pdftex.def Info: figures/150116-0-rt_age.pdf used on input line 123.
-(pdftex.def)             Requested size: 252.94499pt x 159.01285pt.
-
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 123--124
- [] 
- []
-
-<figures/140521-simpimp_age-edit.pdf, id=14, 647.47597pt x 325.35652pt>
+<figures/140521-simpimp_age-edit.pdf, id=10, 647.47597pt x 325.35652pt>
 File: figures/140521-simpimp_age-edit.pdf Graphic file (type pdf)
 
 <use figures/140521-simpimp_age-edit.pdf>
 Package pdftex.def Info: figures/140521-simpimp_age-edit.pdf used on input line
- 135.
+ 86.
 (pdftex.def)             Requested size: 505.89pt x 254.20897pt.
- [3 <./figures/150116-0-rt_age.pdf>]
-<figures/simpimp0pros.pdf, id=91, 714.72925pt x 351.71399pt>
+ [2]
+
+LaTeX Warning: Citation `huang2009' undefined on input line 93.
+
+<figures/150116-0-rt_age.pdf, id=14, 407.05013pt x 255.8893pt>
+File: figures/150116-0-rt_age.pdf Graphic file (type pdf)
+
+<use figures/150116-0-rt_age.pdf>
+Package pdftex.def Info: figures/150116-0-rt_age.pdf used on input line 122.
+(pdftex.def)             Requested size: 252.94499pt x 159.01285pt.
+
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 122--123
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `fernald2008looking' undefined on input line 128.
+
+[3 <./figures/140521-simpimp_age-edit.pdf>]
+<figures/simpimp0pros.pdf, id=85, 661.19643pt x 341.04674pt>
 File: figures/simpimp0pros.pdf Graphic file (type pdf)
 
 <use figures/simpimp0pros.pdf>
-Package pdftex.def Info: figures/simpimp0pros.pdf used on input line 162.
-(pdftex.def)             Requested size: 505.89pt x 248.94588pt.
+Package pdftex.def Info: figures/simpimp0pros.pdf used on input line 151.
+(pdftex.def)             Requested size: 505.89pt x 260.94153pt.
 
-<figures/simpimp0pros-bar_inf.pdf, id=92, 430.60875pt x 258.03099pt>
+<figures/simpimp0pros-bar_inf.pdf, id=86, 430.60875pt x 258.03099pt>
 File: figures/simpimp0pros-bar_inf.pdf Graphic file (type pdf)
 
 <use figures/simpimp0pros-bar_inf.pdf>
-Package pdftex.def Info: figures/simpimp0pros-bar_inf.pdf used on input line 16
-8.
+Package pdftex.def Info: figures/simpimp0pros-bar_inf.pdf used on input line 15
+7.
 (pdftex.def)             Requested size: 252.94499pt x 151.5755pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 168--169
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 157--158
  [] 
  []
 
-[4 <./figures/140521-simpimp_age-edit.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./figures/simpimp0pros.pdf> <./figures/simpimp0pros-bar_inf.pdf
+LaTeX Warning: Reference `fig:0pros' on page 4 undefined on input line 162.
 
-pdfTeX warning: /usr/texbin/pdflatex (file ./figures/simpimp0pros-bar_inf.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
->] (./simpimp_CogSci15.bbl) [6] (./simpimp_CogSci15.aux)
+[4 <./figures/150116-0-rt_age.pdf> <./figures/simpimp0pros-bar_inf.pdf>]
+
+LaTeX Warning: Citation `clark2009first' undefined on input line 178.
+
+
+LaTeX Warning: Citation `baldwin1993early' undefined on input line 178.
+
+
+Underfull \vbox (badness 1953) has occurred while \output is active []
+
+ [5 <./figures/simpimp0pros.pdf>] (./simpimp_CogSci15.bbl) [6] (./simpimp_CogSc
+i15.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3549 strings out of 493315
- 49454 string characters out of 6137904
- 125209 words of memory out of 5000000
- 6931 multiletter control sequences out of 15000+600000
- 27637 words of font info for 54 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,9n,23p,1147b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on simpimp_CogSci15.pdf (6 pages, 1407522 bytes).
+ 3622 strings out of 495025
+ 50108 string characters out of 6181437
+ 122516 words of memory out of 5000000
+ 6763 multiletter control sequences out of 15000+600000
+ 38618 words of font info for 75 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,9n,23p,1266b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/opt/local/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/f
+onts/type1/urw/courier/ucrr8a.pfb></opt/local/share/texmf-texlive/fonts/type1/u
+rw/times/utmb8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/times/utmr8
+a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on simpimp_CogSci15.pdf (6 pages, 1149088 bytes).
 PDF statistics:
- 3183 PDF objects out of 3580 (max. 8388607)
- 1605 compressed objects within 17 object streams
+ 4653 PDF objects out of 5155 (max. 8388607)
+ 3068 compressed objects within 31 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
