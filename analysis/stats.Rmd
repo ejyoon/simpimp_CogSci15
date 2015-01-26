@@ -11,6 +11,7 @@ Read file:
 rm(list = ls())
 source("../analysis/helpers/useful.R")
 source("../analysis/helpers/et_helper.R")
+library(dplyr)
 
 # read data
 d <- read.csv("../data/simpimp_0pros-short.csv")
