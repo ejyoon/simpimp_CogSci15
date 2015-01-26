@@ -1,0 +1,188 @@
+---
+title: "simpimp_0pros-stat"
+output: html_document
+---
+
+These are stats for simpimp CogSci 2015.
+
+Read file:
+
+```{r}
+rm(list = ls())
+source("../analysis/helpers/useful.R")
+source("../analysis/helpers/et_helper.R")
+
+# read data
+d <- read.csv("../data/simpimp_0pros-short.csv")
+```
+
+# Experiment 1
+
+## lmer
+
+```{r}
+##Experiment 1: No prosody
+# aggregate data across subjects and items
+# window: 1-4 seconds
+mss <- d %>%
+  filter(t.crit >= 1 & t.crit <= 4) %>%
+  filter(age_group != "adult") %>%
+  filter(expt == "1") %>%
+  group_by(trial_type, age_group, subid, item) %>%
+  summarise(correct = mean(correct))
+
+mss$subid <- factor(mss$subid)
+mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
+ms <- aggregate(correct ~ trial_type + age_group + subid, mss, mean)
+qplot(age_group, correct, col=trial_type, data=ms) + 
+  geom_hline(yintercept=.5,lty=2) + 
+  geom_smooth(method="lm")
+
+simp.lm <- lmer(correct ~ age_group * trial_type 
+                + (trial_type | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
+                data=mss)
+summary(simp.lm)
+```
+
+Looks like we have main effects of age and trial type, but no interaction. Thus, across all trial types, there is a developmental trend of improved performance.
+
+What if we look only at inf trials?
+
+```{r}
+# looking at just inf trials
+# window: 1-4 seconds
+mss <- d %>%
+  filter(t.crit >= 1 & t.crit <= 4) %>%
+  filter(age_group != "adult") %>%
+  filter(expt == "1") %>%
+  filter(trial_type == "inf") %>%
+  group_by(trial_type, age_group, subid, item) %>%
+  summarise(correct = mean(correct))
+
+mss$subid <- factor(mss$subid)
+mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
+simp.lm <- lmer(correct ~ age_group +
+                + (1 | subid) + (age_group | item),
+                data=mss)
+summary(simp.lm)
+```
+
+We see significant main effect of age within inf trials, such that with increasing age, children's looking at the inferential target (a measure of their implicature computation) increases.
+
+## t-tests
+
+T-tests to see whether children's looking to target is above chance level
+
+```{r}
+# 2y
+exp1.subs <- d %>%
+  filter(t.crit >= 1 & t.crit <= 4) %>%
+  filter(age_group != "adult") %>%
+  filter(expt == "1") %>%
+  group_by(trial_type, age_group, subid, item) %>%
+  summarise(correct = mean(correct))
+
+t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="cs")$correct, mu=.5)
+
+# 3y
+t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="cs")$correct, mu=.5)
+
+# 4y
+t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="cs")$correct, mu=.5)
+
+# 5y
+t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="cs")$correct, mu=.5)
+```
+
+
+# Experiment 2
+
+```{r}
+##Experiment 2: prosody
+#aggregate data across subjects and items
+mss <- d %>%
+  filter(age_group == "3" | age_group == "4") %>%
+  filter(expt == "2") %>%
+  filter(t.crit > 1 & t.crit <= 4.2) %>%
+  mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
+  group_by(trial_type, age_group, window, subid, item) %>%
+  summarise(correct = mean(correct))
+
+mss$subid <- factor(mss$subid)
+mss$age_group <- as.factor(mss$age_group) # age as continuous
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
+ms <- aggregate(correct ~ trial_type + age_group + window + subid, mss, mean)
+qplot(age_group, correct, col=trial_type, data=ms) + 
+  facet_wrap(~window) +
+  geom_hline(yintercept=.5,lty=2) +
+  geom_smooth(method="lm")
+
+simp.lm <- lmer(correct ~ age_group * trial_type * window
+                + (trial_type | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
+                data=mss)
+summary(simp.lm)
+```
+
+Within Exp 2, there is no main effect of age or interaction (e.g., window & trialtype).
+
+What if we look at two experiments together, only at inference trials? We expect to see interaction between expt x window such that children had greater accuracy rate in inference trials in Exp 2 in the late window.
+
+```{r}
+mss <- d %>%
+  filter(age_group == "3" | age_group == "4") %>%
+  filter(t.crit > 1 & t.crit <= 4.2) %>%
+  filter(trial_type == "inf") %>%
+  mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
+  group_by(expt, trial_type, age_group, window, subid, item) %>%
+  summarise(correct = mean(correct))
+
+mss$subid <- factor(mss$subid)
+mss$age_group <- as.factor(mss$age_group) # age as factor
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
+ms <- aggregate(correct ~ expt + age_group + window + subid, mss, mean)
+qplot(window, correct, col=age_group, data=ms) + 
+  facet_wrap(expt~age_group) +
+  geom_hline(yintercept=.5,lty=2) +
+  geom_smooth(method="lm")
+
+simp.lm <- lmer(correct ~ expt * age_group * window
+                + (window | subid) + (expt + age_group + window | item), 
+                data=mss)
+summary(simp.lm)
+
+```
+
+But we don't see it...
+
+
+```{r}
+#Experiment 1: within each age group
+exp2.subs <- d %>%
+  filter(age_group == "3" | age_group == "4") %>%
+  filter(t.crit > 1 & t.crit <= 4.2) %>%
+  filter(trial_type == "inf") %>%
+  filter(expt == "2") %>%
+  mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
+  group_by(expt, trial_type, age_group, window, subid, item) %>%
+  summarise(correct = mean(correct))
+
+t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="early")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="late")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="early")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="late")$correct, mu=.5)
+```
+
