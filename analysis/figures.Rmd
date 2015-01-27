@@ -1,0 +1,142 @@
+---
+title: "figures"
+output: html_document
+---
+These are figures for simpimp CogSci 2015.
+
+Read file:
+
+```{r}
+rm(list = ls())
+source("../analysis/helpers/useful.R")
+source("../analysis/helpers/et_helper.R")
+library(dplyr)
+
+# read data
+d <- read.csv("../data/simpimp_0pros-short.csv")
+```
+
+
+
+```{r}
+subsample.hz <- 30 # 10 hz is decent, eventually we should set to 30 or 60 hz
+d$t.crit.binned <- round(d$t.crit*subsample.hz)/subsample.hz # subsample step
+```
+
+## Expt 1: correct ~ t.crit.binned + trial_type + subid + age_group
+
+```{r}
+mss <- aggregate(correct ~ t.crit.binned + trial_type + subid + age_group, 
+                 subset(d, expt == "1"), mean)
+ms <- aggregate(correct ~ t.crit.binned + trial_type + age_group, mss, mean)
+
+ggplot(ms, aes(x = t.crit.binned, y = correct, colour = age_group)) +
+  geom_line() +
+  facet_wrap(~ trial_type) + 
+  geom_hline(yintercept=.50,lty=4) + 
+  geom_vline(xintercept=.78,lty=3) +   
+  geom_vline(xintercept=0,lty=3) + 
+  xlab("Time (s)") + ylab("Proportion correct looking") + 
+  scale_x_continuous(limits=c(-1,3.3),expand = c(0,0)) + 
+  scale_y_continuous(limits=c(0,1),expand = c(0,0))
+```
+
+## Expt 1: reaction time
+
+```{r}
+# Column to indicate whether looking at onset when trial started
+d$subtrial <- paste(d$subid,"_",d$item,sep="")
+onset <- subset(d, t.crit > - 0.005 & t.crit < 0.005)
+head(onset)
+onset$targetAtOnset <- ifelse(onset$correct == "TRUE", "1", "0")
+for (i in onset$subtrial) {
+  d$targetAtOnset[d$subtrial == i] <- onset$targetAtOnset[onset$subtrial == i]
+}
+
+d1 <- subset(d, targetAtOnset == "0")
+
+subsample.hz <- 30 # 10 hz is decent, eventually we should set to 30 or 60 hz
+d1$t.crit.binned <- round(d1$t.crit*subsample.hz)/subsample.hz # subsample step
+
+d1_0 <- subset(d1, t.crit > 0)
+d1_0 <- subset(d1_0, correct == "TRUE")
+
+d1_1 <- do.call(rbind, unname(by(d1_0, d1_0$subtrial, function(x) x[x$t.crit == min(x$t.crit),])))
+
+ms <- aggregate(t.crit.binned ~ age_group + trial_type,
+                  data = d1_1, mean)
+mss <- aggregate(t.crit.binned ~ age_group + trial_type + subid, data = d1_1, mean)
+ms$cih <- aggregate(t.crit.binned ~ age_group + trial_type, mss, ci.high)$t.crit.binned
+ms$cil <- aggregate(t.crit.binned ~ age_group + trial_type, mss, ci.low)$t.crit.binned
+
+library(directlabels)
+qplot(age_group, t.crit.binned, group=trial_type, label=trial_type,
+      colour=trial_type, 
+      geom="line",
+      data=subset(ms, age_group != "adult")) +
+    geom_linerange(aes(ymin=t.crit.binned-cil,ymax=t.crit.binned+cih,width=.2),
+                  position=position_dodge(width=.1)) + 
+  ylab("Reaction Time (s)") + 
+  xlab("Age group")
+
+```
+
+## Expt 1: Dwell time
+```{r}
+window <- c(1.5,3)
+mss <- aggregate(correct ~ trialType, 
+                subset(d,t.crit.binned > window[1] & t.crit.binned < window[2] & (expt == "1")), 
+                       mean)
+ms <- aggregate(correct ~ trialType, mss, mean)
+ms$cih <- aggregate(correct ~ trialType, mss, ci.high)$correct
+ms$cil <- aggregate(correct ~ trialType, mss, ci.low)$correct
+
+qplot(trialType,correct,
+      fill=trialType, stat="identity",
+      geom="bar",ylim=c(0,1),
+      data=ms) + 
+  ylab("Proportion correct looking") + 
+  geom_hline(yintercept=.50,lty=4) + 
+  geom_errorbar(aes(ymin=correct-cil,ymax=correct+cih,width=.2))
+
+# by age
+window <- c(1.5,4)
+mss <- aggregate(correct ~ trial_type + age_group + subid, 
+                subset(d,t.crit.binned > window[1] & t.crit.binned < window[2] & expt == "1"), 
+                       mean)
+ms <- aggregate(correct ~ trial_type + age_group, mss, mean)
+ms$cih <- aggregate(correct ~ trial_type + age_group, mss, ci.high)$correct
+ms$cil <- aggregate(correct ~ trial_type + age_group, mss, ci.low)$correct
+
+quartz()
+qplot(age_group,correct,
+      fill=age_group, stat="identity",
+      geom="bar",ylim=c(0,1),
+      data=subset(ms, age_group != "1")) + 
+  ylab("Proportion correct looking") + 
+  geom_hline(yintercept=.50,lty=4) + 
+  facet_wrap(~trial_type) + 
+  geom_errorbar(aes(ymin=correct-cil,ymax=correct+cih,width=.2)) 
+```
+
+
+
+## Expt 2: correct ~ t.crit.binned + trial_type + subid + age_group
+
+```{r}
+mss <- aggregate(correct ~ expt + t.crit.binned + trial_type + subid + age_group, 
+                 subset(d, ((expt == "1" & t.crit.binned <3.7) | expt == "2") & age_group == "3" | age_group == "4"), mean)
+ms <- aggregate(correct ~ expt + t.crit.binned + trial_type + age_group, mss, mean)
+
+ggplot(subset(ms, trial_type == "inf"), aes(x = t.crit.binned, y = correct, colour = age_group)) +
+  geom_line() +
+  facet_wrap(~expt) +
+  geom_hline(yintercept=.50,lty=4) + 
+  geom_vline(xintercept=1.16,lty=3) +   
+  geom_vline(xintercept=0,lty=3) + 
+  xlab("Time (s)") + ylab("Proportion correct looking") + 
+  scale_x_continuous(limits=c(-1,4),expand = c(0,0)) + 
+  scale_y_continuous(limits=c(0,1),expand = c(0,0)) +
+  scale_colour_manual(values=c("#909000", "#18a860"))
+```
+
