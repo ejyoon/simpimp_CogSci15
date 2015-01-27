@@ -44,32 +44,17 @@ ggplot(ms, aes(x = t.crit.binned, y = correct, colour = age_group)) +
 ## Expt 1: reaction time
 
 ```{r}
-# Column to indicate whether looking at onset when trial started
-d$subtrial <- paste(d$subid,"_",d$item,sep="")
-onset <- subset(d, t.crit > - 0.005 & t.crit < 0.005)
-head(onset)
-onset$targetAtOnset <- ifelse(onset$correct == "TRUE", "1", "0")
-for (i in onset$subtrial) {
-  d$targetAtOnset[d$subtrial == i] <- onset$targetAtOnset[onset$subtrial == i]
-}
+library(directlabels)
+d1_1 <- read.csv("../data/simpimp_0pros_rt.csv")
 
-d1 <- subset(d, targetAtOnset == "0")
-
-subsample.hz <- 30 # 10 hz is decent, eventually we should set to 30 or 60 hz
-d1$t.crit.binned <- round(d1$t.crit*subsample.hz)/subsample.hz # subsample step
-
-d1_0 <- subset(d1, t.crit > 0)
-d1_0 <- subset(d1_0, correct == "TRUE")
-
-d1_1 <- do.call(rbind, unname(by(d1_0, d1_0$subtrial, function(x) x[x$t.crit == min(x$t.crit),])))
-
+# aggregate t.crit.binned ~ age_group + trial_type
 ms <- aggregate(t.crit.binned ~ age_group + trial_type,
                   data = d1_1, mean)
 mss <- aggregate(t.crit.binned ~ age_group + trial_type + subid, data = d1_1, mean)
 ms$cih <- aggregate(t.crit.binned ~ age_group + trial_type, mss, ci.high)$t.crit.binned
 ms$cil <- aggregate(t.crit.binned ~ age_group + trial_type, mss, ci.low)$t.crit.binned
 
-library(directlabels)
+#plot
 qplot(age_group, t.crit.binned, group=trial_type, label=trial_type,
       colour=trial_type, 
       geom="line",
@@ -78,7 +63,6 @@ qplot(age_group, t.crit.binned, group=trial_type, label=trial_type,
                   position=position_dodge(width=.1)) + 
   ylab("Reaction Time (s)") + 
   xlab("Age group")
-
 ```
 
 ## Expt 1: Dwell time
