@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  27 JAN 2015 18:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  27 JAN 2015 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -185,30 +185,27 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box28
 \enitdp@description=\count102
 )
-(./simpimp_CogSci15.aux
-
-LaTeX Warning: Label `tab:lmer1' multiply defined.
-
-)
+(./simpimp_CogSci15.aux)
 \openout1 = `simpimp_CogSci15.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 26
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 25
 .
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omspzccm.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 \c@maskedRefs=\count103
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/apacite/english.apc
@@ -278,53 +275,53 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 28
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 27
 .
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 28
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 27
 .
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 28
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 27
 .
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 
-Underfull \hbox (badness 1838) in paragraph at lines 45--46
+Underfull \hbox (badness 1838) in paragraph at lines 44--45
 []\OT1/ptm/m/n/10 Children's fail-ures on SI com-pu-ta-tion are sur-pris-ing,
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 45--46
+Underfull \hbox (badness 1097) in paragraph at lines 44--45
 \OT1/ptm/m/n/10 ness of ut-ter-ances. For ex-am-ple, by around the same
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 
-Underfull \hbox (badness 1515) in paragraph at lines 49--50
+Underfull \hbox (badness 1515) in paragraph at lines 48--49
 \OT1/ptm/m/it/10 hoc \OT1/ptm/m/n/10 im-pli-ca-tures, which de-pend on contextu
 ally-derived
  []
@@ -334,83 +331,79 @@ ally-derived
 
 
 ]
-<figures/140521-simpimp_age-edit.pdf, id=10, 647.47597pt x 325.35652pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<figures/140521-simpimp_age-edit.pdf, id=13, 647.47597pt x 325.35652pt>
 File: figures/140521-simpimp_age-edit.pdf Graphic file (type pdf)
 
 <use figures/140521-simpimp_age-edit.pdf>
 Package pdftex.def Info: figures/140521-simpimp_age-edit.pdf used on input line
- 81.
-(pdftex.def)             Requested size: 505.89pt x 254.20897pt.
- [2] [3 <./figures/140521-simpimp_age-edit.pdf>] <figures/simpimp0-rt_age.pdf, 
-id=83, 322.02658pt x 213.0627pt>
+ 88.
+(pdftex.def)             Requested size: 404.71353pt x 203.36717pt.
+ [3]
+<figures/simpimp0-rt_age.pdf, id=20, 322.02658pt x 213.0627pt>
 File: figures/simpimp0-rt_age.pdf Graphic file (type pdf)
 
 <use figures/simpimp0-rt_age.pdf>
-Package pdftex.def Info: figures/simpimp0-rt_age.pdf used on input line 133.
-(pdftex.def)             Requested size: 252.94499pt x 167.35861pt.
+Package pdftex.def Info: figures/simpimp0-rt_age.pdf used on input line 142.
+(pdftex.def)             Requested size: 231.26378pt x 153.01488pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 133--134
- [][] 
- []
-
-<figures/150126-simpimp0pros-line.pdf, id=84, 455.4073pt x 195.3967pt>
-File: figures/150126-simpimp0pros-line.pdf Graphic file (type pdf)
-
-<use figures/150126-simpimp0pros-line.pdf>
-Package pdftex.def Info: figures/150126-simpimp0pros-line.pdf used on input lin
-e 156.
-(pdftex.def)             Requested size: 505.89pt x 217.0688pt.
-
-<figures/simpimp_pros-bar_inf.pdf, id=85, 357.09883pt x 232.3347pt>
+<figures/simpimp_pros-bar_inf.pdf, id=21, 357.09883pt x 232.3347pt>
 File: figures/simpimp_pros-bar_inf.pdf Graphic file (type pdf)
 
 <use figures/simpimp_pros-bar_inf.pdf>
 Package pdftex.def Info: figures/simpimp_pros-bar_inf.pdf used on input line 16
-4.
+6.
 (pdftex.def)             Requested size: 252.94499pt x 164.56882pt.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 164--165
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 166--167
  [] 
  []
 
 
-LaTeX Warning: Reference `fig:0pros' on page 4 undefined on input line 169.
+Underfull \vbox (badness 7256) has occurred while \output is active []
+
+ [4 <./figures/140521-simpimp_age-edit.pdf> <./figures/simpimp0-rt_age.pdf>]
+<figures/simpimp0pros-line_match.pdf, id=152, 381.54306pt x 176.12471pt>
+File: figures/simpimp0pros-line_match.pdf Graphic file (type pdf)
+
+<use figures/simpimp0pros-line_match.pdf>
+Package pdftex.def Info: figures/simpimp0pros-line_match.pdf used on input line
+ 172.
+(pdftex.def)             Requested size: 354.12144pt x 163.46909pt.
+
+Overfull \vbox (2.6058pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 4001) has occurred while \output is active []
+[5 <./figures/simpimp_pros-bar_inf.pdf>]
+Underfull \vbox (badness 1194) has occurred while \output is active []
 
- [4 <./figures/simpimp0-rt_age.pdf>] [5 <./figures/150126-simpimp0pros-line.pdf
-> <./figures/simpimp_pros-bar_inf.pdf>] (./simpimp_CogSci15.bbl [6]) [7
+ [6 <./figures/simpimp0pros-line_match.pdf>] (./simpimp_CogSci15.bbl
+Underfull \vbox (badness 2351) has occurred while \output is active []
 
-]
-(./simpimp_CogSci15.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+) [7]
+(./simpimp_CogSci15.aux) ) 
 Here is how much of TeX's memory you used:
- 3595 strings out of 493315
- 50263 string characters out of 6137904
- 124638 words of memory out of 5000000
- 6974 multiletter control sequences out of 15000+600000
- 38618 words of font info for 75 fonts, out of 8000000 for 9000
+ 3599 strings out of 493315
+ 50286 string characters out of 6137904
+ 126615 words of memory out of 5000000
+ 6975 multiletter control sequences out of 15000+600000
+ 40061 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,23p,1259b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on simpimp_CogSci15.pdf (7 pages, 697158 bytes).
+ 38i,9n,23p,1259b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on simpimp_CogSci15.pdf (7 pages, 693502 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
+ 364 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
