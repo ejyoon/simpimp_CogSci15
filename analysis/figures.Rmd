@@ -69,22 +69,6 @@ direct.label(qplot(age_group, t.crit.binned, group=trial_type, label=trial_type,
 
 ## Expt 1: Dwell time
 ```{r}
-window <- c(1.5,3)
-mss <- aggregate(correct ~ trialType, 
-                subset(d,t.crit.binned > window[1] & t.crit.binned < window[2] & (expt == "1")), 
-                       mean)
-ms <- aggregate(correct ~ trialType, mss, mean)
-ms$cih <- aggregate(correct ~ trialType, mss, ci.high)$correct
-ms$cil <- aggregate(correct ~ trialType, mss, ci.low)$correct
-
-qplot(trialType,correct,
-      fill=trialType, stat="identity",
-      geom="bar",ylim=c(0,1),
-      data=ms) + 
-  ylab("Proportion correct looking") + 
-  geom_hline(yintercept=.50,lty=4) + 
-  geom_errorbar(aes(ymin=correct-cil,ymax=correct+cih,width=.2))
-
 # by age
 window <- c(1.5,4)
 mss <- aggregate(correct ~ trial_type + age_group + subid, 
