@@ -1,6 +1,31 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Baldwin%
+}{%
+Baldwin%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+baldwin1993early}
+\APACinsertmetastar {%
+baldwin1993early}%
+\begin{APACrefauthors}%
+Baldwin, D\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Early referential understanding: Infants' ability to
+  recognize referential acts for what they are.} {Early referential
+  understanding: Infants' ability to recognize referential acts for what they
+  are.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Developmental psychology}{29}{5}{832}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Barner%
 , Brooks%
 \BCBL {}\ \BBA {} Bale%
@@ -58,6 +83,28 @@ Barner, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Clark%
+}{%
+Clark%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+clark2009first}
+\APACinsertmetastar {%
+clark2009first}%
+\begin{APACrefauthors}%
+Clark, E\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2009}.
+\newblock
+\APACrefbtitle {First language acquisition} {First language acquisition}.
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Davidson%
 , Amso%
 , Anderson%
@@ -90,6 +137,36 @@ Davidson, M\BPBI C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Fenson%
+\ \protect \BOthers {.}}{%
+Fenson%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1994}}%
+}]{%
+fenson1994variability}
+\APACinsertmetastar {%
+fenson1994variability}%
+\begin{APACrefauthors}%
+Fenson, L.%
+, Dale, P\BPBI S.%
+, Reznick, J\BPBI S.%
+, Bates, E.%
+, Thal, D\BPBI J.%
+, Pethick, S\BPBI J.%
+\BDBL {}Stiles, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1994}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Variability in early communicative development}
+  {Variability in early communicative development}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monographs of the society for research in child
+  development}{}{}{i--185}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Fernald%
 , Pinto%
 , Swingley%
@@ -119,6 +196,37 @@ Fernald, A.%
   2nd year}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychological Science}{9}{3}{228--231}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fernald%
+, Zangl%
+, Portillo%
+\BCBL {}\ \BBA {} Marchman%
+}{%
+Fernald%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+fernald2008looking}
+\APACinsertmetastar {%
+fernald2008looking}%
+\begin{APACrefauthors}%
+Fernald, A.%
+, Zangl, R.%
+, Portillo, A\BPBI L.%
+\BCBL {}\ \BBA {} Marchman, V\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Looking while listening: Using eye movements to monitor
+  spoken language} {Looking while listening: Using eye movements to monitor
+  spoken language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Developmental psycholinguistics: On-line methods in
+  children's language processing}{}{}{113--132}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -166,6 +274,29 @@ Grice, H\BPBI P.%
 {\BBOQ}\APACrefatitle {Logic and conversation} {Logic and conversation}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Syntax and semantics}{3}{}{41--58}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Horn%
+}{%
+Horn%
+}{%
+{\protect \APACyear {1972}}%
+}]{%
+horn1972}
+\APACinsertmetastar {%
+horn1972}%
+\begin{APACrefauthors}%
+Horn, L\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1972}.
+\newblock
+\APACrefbtitle {On the semantic properties of logical operators in English} {On
+  the semantic properties of logical operators in english}.
+\newblock
+\BUPhD, University of California, Los Angeles.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

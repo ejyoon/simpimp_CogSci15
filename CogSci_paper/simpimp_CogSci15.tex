@@ -66,7 +66,7 @@ There were three types of test trials (pictured in Figure \ref{fig:age}, bottom)
 
 There were two additional trial types, with semantically unambiguous targets: \emph{Control-double} trials looked identical to inference trials, but the target and distractor were switched, such that the double-feature item was the target and the single-feature item was the distractor, and the test sentence named the unique feature on the target. \emph{Control-single} trials presented two items that each had a unique single feature, and either could be the target. Children saw 4 inference, 4 control-double, and 4 control-single trials; adults saw 6 inference, 6 control-double, and 12 control-single trials. 
 
-There were six sets of item and feature types, and the features were named with nouns found on the  MacArthur-Bates Communicative Development Inventory word list \cite{fenson1994}. Two orders of the test trials were created, such that trial types and item types were counterbalanced and trial order was pseudo-randomized across the two orders.
+There were six sets of item and feature types, and the features were named with nouns found on the  MacArthur-Bates Communicative Development Inventory word list \cite{fenson1994variability}. Two orders of the test trials were created, such that trial types and item types were counterbalanced and trial order was pseudo-randomized across the two orders.
 
 \subsubsection{Procedure}
 
@@ -85,7 +85,11 @@ Following the introduction, participants saw two gaze-contingent practice trials
 
 Participants of all age groups looked toward the targets in both control-double and control-single trials reliably above chance (50\%; see Figure \ref{fig:age}). Nevertheless, there were age differences in the speed of looking at the target and the proportion of correct looking across both control trial types, congruent with the findings of \citeA{fernald1998rapid}, who found that children's efficiency of familiar word recognition over the second year; the current data show this developmental pattern continuing throughout childhood. 
 
-For inference trials, we observed similar age differences in accuracy. Children older than 4 showed robust looking to inferential targets (for 4-year-olds: $t(23) = 2.74$, $p =.01$). For example, upon hearing ``Bert's plate has a carrot,'' older children were able to identify the plate with only a carrot as the referent rather than the plate with a carrot and a banana, replicating \citeA{stillerLLD}'s findings of ad-hoc implicature (though that study found successes in 3.5--4-year-old children as well). Though previous datasets are not directly comparable due to low-level differences in the task and materials, this finding is nevertheless consistent with the hypothesis that children's inferential ability might have been obscured in previous SI tasks due to the unavailability of lexical alternatives (e.g. ``all'' when ``some'' is mentioned; \citeNP{huang2009}).
+For inference trials, we observed similar age differences in accuracy. Children older than 4 showed robust looking to inferential targets (for 4-year-olds: $t(23) = 2.74$, $p =.01$). For example, upon hearing ``Bert's plate has a carrot,'' older children were able to identify the plate with only a carrot as the referent rather than the plate with a carrot and a banana, replicating \citeA{stillerLLD}'s findings of ad-hoc implicature (though that study found successes in 3.5--4-year-old children as well). Though previous datasets are not directly comparable due to low-level differences in the task and materials, this finding is nevertheless consistent with the hypothesis that children's inferential ability might have been obscured in previous SI tasks due to the unavailability of lexical alternatives (e.g. ``all'' when ``some'' is mentioned; \citeNP{huang2009semantic}).
+
+One additional finding emerged from our analysis: two-year-olds' looking at the target was below chance, rather than at chance, indicating that they tended to look more at distractors than targets ($t(23)  = 1.93$, $p = .066$) Hence, two-year-olds did not even seem to consider inferential targets and distractors as equally likely referents based on the literal meaning of the utterance. Rather, they did not disengage from distractors at all relative to their baseline bias prior to hearing the target word. We return to this pattern in the General Discussion when we speculate about the sources for the developmental changes we observed. 
+
+We fit a linear mixed-effects model \footnote{All mixed-effects models were run using the lme4 package in R Studio Version 0.98.932. The random effects structure for this model was as follows: (trial type | subid) + (age | item)} to measure the effects of trial type (reference group: control-single) and age (as a continuous variable) on the proportion of children looking to the target between 1 and 4s after noun onset (Table\ref{tab:lmer1}). We selected this time window because participants would have to wait until the end of target noun (0.8 seconds on average) to know they should switch to the inferential target, given the absence of a disambiguating continuation (e.g., ``Elmo's plate has a carrot \emph{and banana}.''). Results of the mixed-effects model indicate significant main effects of trial type and age: participants looked to the target significantly less in inference trials compared to control-single trials, and across all trial types, participants' looking to target increased with age. 
 
 
 \begin{table}[b!]
@@ -95,38 +99,46 @@ For inference trials, we observed similar age differences in accuracy. Children 
 \hline
 Predictor  &  Value (SE) & \emph{t}-value\\
 \hline
-Intercept  & .70 (.05) & 15.06 \\
-Age & .02 (.01) &  2.05 \\
-Control-single & -.10 (.06) & -1.57 \\
-Inference & -.34 (.07) & -4.91 \\
-Age $\times$ Control-single & .02 (.02) & .98 \\
-Age $\times$ Inference & .03 (.02) & 1.71 \\
+Intercept  & .60 (.05) & 12.30 \\
+Age & .04 (.01) &  3.24 \\
+Control-double & .10 (.06) & 1.81 \\
+Inference & -.24 (.06) & -3.69 \\
+Age $\times$ Control-double & -.02 (.01) & -1.14 \\
+Age $\times$ Inference & .01 (.02) & .86 \\
 \hline
 \end{tabular} 
 \end{center} 
 \end{table}
 
-One additional finding emerged from our analysis: two-year-olds' looking at the target was below chance, rather than at chance, indicating that they looked significantly more at distractors than targets. FIXME. Hence, two-year-olds did not even seem to consider inferential targets and distractors as equally likely referents based on the literal meaning of the utterance. Rather, they did not disengage from distractors at all relative to their baseline bias prior to hearing the target word. We return to this pattern in the General Discussion when we speculate about the sources for the developmental changes we observed. % t-test
+To look more closely at the effect of age within inference trials, we fit a linear mixed-effects model \footnote{The random effects structure for this model was as follows: (1 | subid) + (age | item)} to measure the effect of age on the proportion of children looking to the inferential target between the same time window (Table\ref{tab:lmer2}). Results indicate a significant main effect of age, such that participants looked toward the target at greater rates with increasing age.
 
+\begin{table}[b!]
+\caption{\label{tab:lmer2}  Coefficient estimates from mixed-effects models predicting proportion of looks to target in inference trials in Experiment 1.} 
+\begin{center} 
+\begin{tabular}{l r r r l} 
+\hline
+Predictor  &  Value (SE) & \emph{t}-value\\
+\hline
+Intercept  & .29 (.09) & 3.25 \\
+Age & .06 (.02) &  2.82 \\
+\hline
+\end{tabular} 
+\end{center} 
+\end{table}
 
-We fit a linear mixed-effects model to measure the effects of trial type and age (as a continuous variable) on the proportion of children looking to the target between 1 and 4s after noun onset (Table\ref{tab:lmer1}). We selected this time window because participants would have to wait until the end of target noun (0.8 seconds on average) to know they should switch to the inferential target, given the absence of a disambiguating continuation (e.g., ``Elmo's plate has a carrot \emph{and banana}.''). Results of the mixed-effects model indicate a significant interaction between trial type and age, such that older children looked more toward the inferential target compared with younger children. FIXME % no interaction, main effect of age
-
+We next analyzed participants' reaction times \cite{fernald2008looking}: We isolated trials on which participants were looking at the distractor at the point of disambiguation, and measured the average length of time prior to a shift to the target. Looks to the target were slower and overall lower in proportion in inference trials compared to both control trial types across all age groups (Figure \ref{fig:rt}). A linear mixed-effects model on trials in which participants were looking at the distractor at the onset of the target noun \footnote{The random effects structure for this model was as follows: (1 | subid) + (age | item)} revealed significant main effects of age and trial type on the average time before first switch to targets after hearing the target noun: with increasing age, the time needed to switch to target decreased, and switch to targets was significantly slower in inferential trials compared to control trials. This finding further suggests that implicatures are generally slower and harder to process compared to the unambiguous semantic meanings, regardless of the participants' age. 
 
 \begin{figure}
 \begin{centering} 
-\includegraphics[width=3.5in]{figures/150116-0-rt_age.pdf}
+\includegraphics[width=3.5in]{figures/simpimp0-rt_age.pdf}
 \caption{\label{fig:rt} Average reaction times for first switches to target in trials in which participants were looking at the distractor (and not the target) at the target word onset.}
 \end{centering} 
-% direct labels, remove white space
-
 \end{figure}
 
-We next analyzed participants' reaction times \cite{fernald2008looking}: We isolated trials on which participants were looking at the distractor at the point of disambiguation, and measured the average length of time prior to a shift to the target. Looks to the target were slower and overall lower in proportion in inference trials compared to both control trial types across all age groups (Figure \ref{fig:rt}). This finding further suggests that implicatures are generally slower and harder to process compared to the unambiguous semantic meanings, regardless of the participants' age. STATS! FIXME!
 
 \section{Experiment 2}
 
-In Experiment 1, we found that children of 4 years and older were able to compute implicatures and identify the pragmatically correct referent. Children younger than 4 still struggled with implicature computation, however. In Experiment 2, we explored another factor that could potentially help improve children's performance: prosody. Contrastive stress---a change in pitch, characterized by an initial drop followed by a rise---in assisting inference processing for both adults \cite{ito2008anticipatory} and preschool children \cite{kurumada1contextual}. For example, when children saw a picture of a zebra and a picture of an okapi that resembles a zebra, and heard ``It LOOKS like a zebra'' with a stress on the word ``look,'' children (HOW OLD, FIXME) chose the picture of okapi if the context provided support. In the current experiment, we investigate whether a contrastive stress added to the final noun (e.g., ``Elmo's plate has a CARROT'') in the inference trials would assist children in identifying the pragmatically-correct referent.
-% how old were kurumada's kids
+In Experiment 1, we found that children of 4 years and older were able to compute implicatures and identify the pragmatically correct referent. Children younger than 4 still struggled with implicature computation, however. In Experiment 2, we explored another factor that could potentially help improve children's performance: prosody. Contrastive stress---a change in pitch, characterized by an initial drop followed by a rise---in assisting inference processing for both adults \cite{ito2008anticipatory} and preschool children \cite{kurumada1contextual}. For example, when children saw a picture of a zebra and a picture of an okapi that resembles a zebra, and heard ``It LOOKS like a zebra'' with a stress on the word ``look,'' 3- to 4-year-old children chose the picture of okapi if the context provided support. In the current experiment, we investigate whether a contrastive stress added to the final noun (e.g., ``Elmo's plate has a CARROT'') in the inference trials would assist children in identifying the pragmatically-correct referent.
 
 \subsection{Method}
 
@@ -134,33 +146,49 @@ In Experiment 1, we found that children of 4 years and older were able to comput
 
 Participants were recruited as in Experiment 1. For Experiment 2, we focused on recruiting 3- and 4-year-olds. Out of 57 initial participants, the final sample was chosen based on the same criteria as Experiment 1, and consisted of 17 3-year olds (8 female), and 31 4-year olds (18 female).
 
-%% genders need to be filled in
-
 \subsubsection{Stimuli, Design, and Procedure}
 
 The stimuli, design and procedure were identical to Experiment 1, except for one change: Target nouns in each inference trial were produced with contrastive stress (low-high-low pitch accent and longer duration, 1.2 seconds on average). Based on previous findings that children identify contrastive prosody based on the norms set within an experiment, we decided to include prosodic cues only in inference trials \cite{kurumada1contextual}. 
-% Children track speech signals across contexts, and they become aware of the pragmatic function of prosodic cues in ambiguous context if the utterances of the same speaker in unambiguous contexts are distinct (e.g., more familiar, semantically less ambiguous, structurally different from pragmatically loaded utterance). Thus, absence of prosodic cues in control trials could be an important factor to help children interpret the pragmatic intention in inference trials.
 
 \subsection{Results and Discussion}
 
 \begin{figure*}[t]
-	\center{\includegraphics[width=\textwidth]{figures/simpimp0pros.pdf}}
-	\caption{\label{fig:pros0} Proportion of 3- and 4-year-old children looking to the target image as the utterance unfolds. Different colors represent Experiments 1 and 2. Time 0 represents the target noun onset. Proportion correct looking is defined by looks to the target divided by the total looks to both the target and the distractor.}
+	\center{\includegraphics[width=\textwidth]{figures/150126-simpimp0pros-line.pdf}}
+	\caption{\label{fig:pros0} Proportion of 3- and 4-year-old children looking to the target image as the utterance unfolds, comparing across two Experiments. Different colors represent age groups (3- and 4-year-olds). Time 0 represents the target noun onset. Proportion correct looking is defined by looks to the target divided by the total looks to both the target and the distractor.}
 \end{figure*}
-% here, add another duration line for exp 2?
-% make conventions identical to Exp 1: colors, don't use loess
 
 \begin{figure}[t]
 \begin{center} 
-\includegraphics[width=3.5in]{figures/simpimp0pros-bar_inf.pdf}
-\caption{\label{fig:0prosbar} Looking to the target as a proportion of looking to the target and distractor in inference trials, averaged during the time window of 2.5 - 4 s.}
+\includegraphics[width=3.5in]{figures/simpimp_pros-bar_inf.pdf}
+\caption{\label{fig:0prosbar} Looking to the target as a proportion of looking to the target and distractor in inference trials, averaged during two time windows (early: 1 - 2.5 s,  late: 2.5 - 4 s).}
 \end{center} 
 \end{figure}
-% early/late comparison together: window on x-axis, fill with experiment
 
 To determine the effect of prosodic cues on children's inferential processing, we compared looking at targes across both Experiment 1 and 2 and across all three trial types (Figure \ref{fig:0pros}). Children's looking toward unambiguous targets in both control trials remained similar to Experiment 1 in Experiment 2. In contrast, their looking toward inferential targets increased slightly Experiment 2, especially towards the end oft trials. In a post-hoc analysis, we split trials into an early and late period; Figure \ref{fig:0prosbar} shows this analysis directly. 
 
-LMER? FIXME % 1: no split on window, 2: early/late window split
+\begin{table}[b!]
+\caption{\label{tab:lmer1}  Coefficient estimates from mixed-effects models predicting proportion of looks to target in Experiment 2.} 
+\begin{center} 
+\begin{tabular}{l r r r l} 
+\hline
+Predictor  &  Value (SE) & \emph{t}-value\\
+\hline
+Intercept  & .80 (.04) & 21.04 \\
+Age (4-year-old) & -.01 (.05) &  -.19 \\
+Control-double & .03 (.05) & .59 \\
+Inference & -.26 (.05) & -5.07 \\
+Window (Late) & -.02 (.04) & -.46 \\
+Age $\times$  Control-double & .04 (.06) & .65 \\
+Age $\times$  Inference & .07 (.06) & 1.07 \\
+Age $\times$  Window & .03 (.04) & .72 \\
+Control-double $\times$  Window & .05 (.06) & .82 \\
+Inference $\times$  Window & .10 (.06) & 1.73 \\
+Age $\times$ Control-double $\times$ Window & -.07 (.07) & -.93 \\
+Age $\times$ Inference $\times$ Window & -.03 (.07) & -.51 \\
+\hline
+\end{tabular} 
+\end{center} 
+\end{table}
 
 A closer look at inferential trials in the two Experiments revealed that 3-year-old children identified inferential targets above chance when there were supportive prosodic cues, but not when the cues were absent. In Experiment 2, both 3- and 4-year-olds looked at the correct inferential target above chance (for 3-year-olds: $t(16) = 2.47$, $p < .03$; Figure \ref{fig:0prosbar}). This was in contrast to Experiment 1, in which 3-year-olds looked at the inferential target at chance level ($t(27) = 1.49$, $p = .15$). Thus, for 3-year-old children, having access to contextual alternatives helps their implicature computation, but when there is another signal that directs their attention to the contrast between the term offered and its alternative in context. FIXME
 
@@ -172,7 +200,13 @@ Our findings are broadly convergent with previous findings \cite{stillerLLD}, su
 
 One unpredicted and intriguing finding from our study was that two-year-olds not only failed to look at the correct inferential target, but looked more toward the distractor. One potential explanation comes from the inhibitory demands of our task. In inference trials in the current paradigm, the two potential referents differed in their saliency: The distractor was always perceptually and conceptually more salient, because it contained an extra item (e.g., a carrot and a banana). Inhibitory control is difficult for children and continues to develop throughout the period we studied here \cite{davidson2006development, gerardi2000sensitivity}. Congruent with this hypothesis, several recent studies suggest that inhibitory control might potentially affect word recognition in a number of similar eye-tracking paradigms \cite{yurovskybeyond,nordmeyer2013measuring}. Future work should thus address this possibility by explicitly manipulating the salience of potential pragmatic targets.
 
-In sum, in the current work we found that preschool children were able to compute ad-hoc implicatures in contexts where there was substantial contextual support, in particular when they had access to lexical alternatives in the context, and when there were signals that emphasize the contrast between the target and its alternative. FIXME %BRING BACK TO SCALAR IMPLICATURE LITERATURE HERE? Stiller, HuangSned
+In sum, in the current work we found that preschool children were able to compute ad-hoc implicatures in contexts where there was substantial contextual support, in particular when they had access to lexical alternatives in the context, and when there were signals that emphasize the contrast between the target and its alternative. 
+
+This is in line with previous findings that suggested children have difficulties with SI due to their lack of access to linguistic scales (e.g., some-all), but children are able to compute inferences based on scales available in the context (\cite{barner2011accessing, stillerLLD}). 
+
+The current work also sheds light on children's moment-to-moment processing of implicatures. Although it has previously been suggested that children are not able to compute SI's during online language comprehension (e.g., \citeNP{huang2009semantic}), the current work suggests another possibility: there indeed seems to be delay in computing  
+
+FIXME %BRING BACK TO SCALAR IMPLICATURE LITERATURE HERE? Stiller, HuangSned
 
 Even young children are sensitive to the communicative intentions behind utterances they hear \cite{clark2009first,baldwin1993early}. Our work adds to the body of evidence suggesting that by preschool age they generate sophisticated pragmatic implicatures as well, even though these inferences are easily masked by other processing demands of specific contexts and situations. Overall, our current work takes one step further towards reconciling children's early-emerging communicative abilities with the complex pattern of successes and failures that they show in Gricean pragmatics.
 

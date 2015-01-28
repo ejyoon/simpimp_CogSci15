@@ -1,11 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: simpimp_CogSci15.aux
-Case mismatch error between cite keys StillerLLD and stillerLLD
----line 20 of file simpimp_CogSci15.aux
- : \citation{StillerLLD
- :                     }
-I'm skipping whatever remains of this command
 The style file: apacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -17,45 +12,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: YoonCogSci15.bib
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
-You've used 19 entries,
+You've used 24 entries,
             6735 wiz_defined-function locations,
-            1358 strings with 14921 characters,
-and the built_in function-call counts, 40849 in all, are:
-= -- 5065
-> -- 318
-< -- 2182
-+ -- 2261
-- -- 38
-* -- 2756
-:= -- 7945
-add.period$ -- 82
-call.type$ -- 19
-change.case$ -- 326
+            1385 strings with 15841 characters,
+and the built_in function-call counts, 50570 in all, are:
+= -- 6311
+> -- 398
+< -- 2633
++ -- 2760
+- -- 48
+* -- 3345
+:= -- 9659
+add.period$ -- 101
+call.type$ -- 24
+change.case$ -- 411
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 961
-empty$ -- 1438
-format.name$ -- 547
-if$ -- 7450
+cite$ -- 48
+duplicate$ -- 1236
+empty$ -- 1803
+format.name$ -- 688
+if$ -- 9304
 int.to.chr$ -- 0
-int.to.str$ -- 38
+int.to.str$ -- 48
 missing$ -- 0
-newline$ -- 485
-num.names$ -- 152
-pop$ -- 599
+newline$ -- 607
+num.names$ -- 192
+pop$ -- 758
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 96
 quote$ -- 0
-skip$ -- 2515
+skip$ -- 3185
 stack$ -- 0
-substring$ -- 2428
-swap$ -- 581
-text.length$ -- 38
+substring$ -- 2979
+swap$ -- 716
+text.length$ -- 48
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1712
+type$ -- 2176
 warning$ -- 0
-while$ -- 180
+while$ -- 228
 width$ -- 0
-write$ -- 617
-(There was 1 error message)
+write$ -- 766
