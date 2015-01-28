@@ -141,8 +141,19 @@ ggplot(subset(ms, trial_type == "inf"),
 ## Expt 1 & 2: Compare line graphs
 
 ```{r}
-mss <- aggregate(correct ~ expt + t.crit.binned + trial_type + subid + age_group, 
-                 subset(d, ((expt == "1" & t.crit.binned <3.7) | expt == "2") & (age_group == "3" | age_group == "4")), mean)
+mss <- d %>%
+  filter(age_group == "3" | age_group == "4") %>%
+  filter((expt == "1" & t.crit > -1 & t.crit <= 3.62) |
+           (expt == "2" & t.crit > -1 & t.crit <= 4)) %>%
+  filter(trial_type == "inf") %>%
+  group_by(expt, trial_type, age_group, t.crit.binned, subid, item) %>%
+  summarise(correct = mean(correct, na.rm = TRUE))
+
+mss$subid <- factor(mss$subid)
+mss$expt <- factor(mss$expt)
+mss$age_group <- as.factor(mss$age_group) # age as factor
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
 ms <- aggregate(correct ~ expt + t.crit.binned + trial_type + age_group, mss, mean)
 
 ms$expt <- as.factor(ms$expt)
@@ -151,15 +162,19 @@ levels(ms$age_group) <- c("2", "3-year-olds", "4-year-olds", "5", "adult")
 
 p <- ggplot(subset(ms, trial_type == "inf"), aes(x = t.crit.binned, y = correct, colour = age_group)) +
   geom_line() +
-  facet_wrap(~expt) +
+  facet_grid(.~expt, scales = "free_x") +
   geom_vline(xintercept=0,lty=3) + 
+  geom_hline(yintercept=.50,lty=4) + 
+  theme(legend.position="none") +
   xlab("Time (s)") + ylab("Proportion correct looking") + 
-  scale_x_continuous(limits=c(-1,4),expand = c(0,0)) + 
+  scale_x_continuous(expand = c(0,0)) + 
   scale_y_continuous(limits=c(0,1),expand = c(0,0)) +
   scale_colour_manual(values=c("#909000", "#18a860"))
 
 vline.data <- data.frame(z = c(.78, 1.16), expt = c("Expt 1","Expt 2"))
+vline.data2 <- data.frame(z = c(2.2, 2.58), expt = c("Expt 1","Expt 2"))
 p + geom_vline(aes(xintercept = z), vline.data, lty=3) +
+  geom_vline(aes(xintercept = z), vline.data2, lty=3) +
  geom_dl(aes(label=age_group),method="smart.grid")
 
 
