@@ -180,13 +180,16 @@ What if we look at two experiments together, only at inference trials? We expect
 ```{r}
 mss <- d %>%
   filter(age_group == "3" | age_group == "4") %>%
-  filter(t.crit > 1 & t.crit <= 4.2) %>%
+  filter((expt == "1" & t.crit > .78 & t.crit <= 3.62) |
+           (expt == "2" & t.crit > 1.16 & t.crit <= 4)) %>%
   filter(trial_type == "inf") %>%
-  mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
+  mutate(window = ifelse(expt =="1",
+    ifelse(t.crit > .78 & t.crit <= 2.2, "early", "late"), ifelse(t.crit > 1.16 & t.crit <= 2.58, "early", "late"))) %>%
   group_by(expt, trial_type, age_group, window, subid, item) %>%
   summarise(correct = mean(correct, na.rm = TRUE))
 
 mss$subid <- factor(mss$subid)
+mss$expt <- factor(mss$expt)
 mss$age_group <- as.factor(mss$age_group) # age as factor
 mss$trial_type <- relevel(mss$trial_type, "cs")
 
