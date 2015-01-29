@@ -1,0 +1,41 @@
+---
+title: "simpimp0pros_rt"
+output: html_document
+---
+
+## reaction time
+
+```{r}
+rm(list = ls())
+source("../analysis/helpers/useful.R")
+source("../analysis/helpers/et_helper.R")
+detach(package:plyr)
+library(dplyr)
+
+
+d1_1 <- read.csv("../data/simpimp_0pros_rt.csv")
+
+# stats for rt
+ms <- aggregate(t.crit.binned ~ age_group + trial_type,
+                  data = d1_1, mean)
+mss <- d1_1 %>%
+  filter(age_group != "adult") %>%
+  filter(expt == "1") %>%
+  group_by(trial_type, age_group, subid, item) %>%
+  summarise(rt = mean(t.crit.binned, na.rm = TRUE))
+
+mss$subid <- factor(mss$subid)
+mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
+ms <- aggregate(rt ~ trial_type + age_group + subid, mss, mean)
+qplot(age_group, rt, col=trial_type, data=ms) + 
+  geom_hline(yintercept=.5,lty=2) + 
+  geom_smooth(method="lm")
+
+simp.lm <- lmer(rt ~ age_group * trial_type 
+                + (1 | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
+                data=mss)
+summary(simp.lm)
+```
+

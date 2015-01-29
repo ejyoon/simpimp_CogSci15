@@ -74,69 +74,6 @@ summary(simp.lm)
 
 We see significant main effect of age within inf trials, such that with increasing age, children's looking at the inferential target (a measure of their implicature computation) increases.
 
-## reaction time
-
-```{r}
-d1_1 <- read.csv("../data/simpimp_0pros_rt.csv")
-
-# stats for rt
-ms <- aggregate(t.crit.binned ~ age_group + trial_type,
-                  data = d1_1, mean)
-mss <- d1_1 %>%
-  filter(age_group != "adult") %>%
-  filter(expt == "1") %>%
-  group_by(trial_type, age_group, subid, item) %>%
-  summarise(rt = mean(t.crit.binned, na.rm = TRUE))
-
-mss$subid <- factor(mss$subid)
-mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
-mss$trial_type <- relevel(mss$trial_type, "cs")
-
-ms <- aggregate(rt ~ trial_type + age_group + subid, mss, mean)
-qplot(age_group, rt, col=trial_type, data=ms) + 
-  geom_hline(yintercept=.5,lty=2) + 
-  geom_smooth(method="lm")
-
-simp.lm <- lmer(rt ~ age_group * trial_type 
-                + (trial_type | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
-                data=mss)
-summary(simp.lm)
-```
-
-## t-tests
-
-T-tests to see whether children's looking to target is above chance level
-
-```{r}
-# 2y
-exp1.subs <- d %>%
-  filter(t.crit >= 1 & t.crit <= 4) %>%
-  filter(age_group != "adult") %>%
-  filter(expt == "1") %>%
-  group_by(trial_type, age_group, subid) %>%
-  summarise(correct = mean(correct, na.rm = TRUE))
-
-t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="inf")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="cd")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="cs")$correct, mu=.5)
-
-# 3y
-t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="inf")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="cd")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="cs")$correct, mu=.5)
-
-# 4y
-t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="inf")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="cd")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="cs")$correct, mu=.5)
-
-# 5y
-t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="inf")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="cd")$correct, mu=.5)
-t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="cs")$correct, mu=.5)
-```
-
-
 # Experiment 2
 
 ```{r}
@@ -207,22 +144,3 @@ summary(simp.lm)
 ```
 
 But we don't see it...
-
-
-```{r}
-#Experiment 1: within each age group
-exp2.subs <- d %>%
-  filter(age_group == "3" | age_group == "4") %>%
-  filter(t.crit > 1 & t.crit <= 4.2) %>%
-  filter(trial_type == "inf") %>%
-  filter(expt == "2") %>%
-  mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
-  group_by(expt, trial_type, age_group, window, subid) %>%
-  summarise(correct = mean(correct, na.rm = TRUE))
-
-t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="early")$correct, mu=.5)
-t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="late")$correct, mu=.5)
-t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="early")$correct, mu=.5)
-t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="late")$correct, mu=.5)
-```
-

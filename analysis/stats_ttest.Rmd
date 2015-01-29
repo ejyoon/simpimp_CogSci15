@@ -1,0 +1,74 @@
+---
+title: "simpimp0pros_ttest"
+output: html_document
+---
+
+## t-tests
+
+T-tests to see whether children's looking to target is above chance level
+
+```{r}
+# load
+rm(list = ls())
+source("../analysis/helpers/useful.R")
+source("../analysis/helpers/et_helper.R")
+detach(package:plyr)
+library(dplyr)
+
+# read data
+d <- read.csv("../data/simpimp_0pros-short.csv")
+```
+
+
+### Experiment 1
+
+```{r}
+# 2y
+exp1.subs <- d %>%
+  filter(t.crit >= 1 & t.crit <= 4) %>%
+  filter(age_group != "adult") %>%
+  filter(expt == "1") %>%
+  group_by(trial_type, age_group, subid) %>%
+  summarise(correct = mean(correct, na.rm = TRUE))
+
+t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="2"&trial_type=="cs")$correct, mu=.5)
+
+# 3y
+t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="3"&trial_type=="cs")$correct, mu=.5)
+
+# 4y
+t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="4"&trial_type=="cs")$correct, mu=.5)
+
+# 5y
+t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="cd")$correct, mu=.5)
+t.test(subset(exp1.subs, subset=age_group=="5"&trial_type=="cs")$correct, mu=.5)
+```
+
+
+### Experiment 2
+
+```{r}
+#Experiment 2: within each age group
+exp2.subs <- d %>%
+  filter(age_group == "3" | age_group == "4") %>%
+  filter(t.crit > 1 & t.crit <= 4.2) %>%
+  filter(trial_type == "inf") %>%
+  filter(expt == "2") %>%
+  mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
+  group_by(expt, trial_type, age_group, window, subid) %>%
+  summarise(correct = mean(correct, na.rm = TRUE))
+
+t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="early")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="late")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="early")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="late")$correct, mu=.5)
+```
+
+
