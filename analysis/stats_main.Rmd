@@ -7,10 +7,11 @@ These are stats for simpimp CogSci 2015.
 
 Read file:
 
-```{r}
+```{r initial_setup}
 rm(list = ls())
 source("../analysis/helpers/useful.R")
 source("../analysis/helpers/et_helper.R")
+detach(package:plyr)
 library(dplyr)
 
 # read data
@@ -19,12 +20,11 @@ d <- read.csv("../data/simpimp_0pros-short.csv")
 
 # Experiment 1
 
-## lmer
+## lmer: effect of trial type and age on accuracy in Expt 1 (Table 1)
 
-```{r}
-##Experiment 1: No prosody
-# aggregate data across subjects and items
-# window: 1-4 seconds
+### Set up aggregate
+
+```{r expt1_lmer1}
 mss <- d %>%
   filter(t.crit >= 1 & t.crit <= 4) %>%
   filter(age_group != "adult") %>%
@@ -35,12 +35,25 @@ mss <- d %>%
 mss$subid <- factor(mss$subid)
 mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
 mss$trial_type <- relevel(mss$trial_type, "cs")
+```
 
-ms <- aggregate(correct ~ trial_type + age_group + subid, mss, mean)
+### plot
+
+```{r expt1_lmer1_plot}
+# plot
+ms <- mss %>%
+  group_by(trial_type, age_group, subid) %>%
+  summarise(correct = mean(correct, na.rm = TRUE))
+
 qplot(age_group, correct, col=trial_type, data=ms) + 
   geom_hline(yintercept=.5,lty=2) + 
   geom_smooth(method="lm")
+```
 
+### model 
+
+```{r expt1_lmer1_model}
+# lmer
 simp.lm <- lmer(correct ~ age_group * trial_type 
                 + (trial_type | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
                 data=mss)
@@ -51,7 +64,11 @@ Looks like we have main effects of age and trial type, but no interaction. Thus,
 
 What if we look only at inf trials?
 
-```{r}
+## lmer: effect of age on accuracy within inference trials in Expt 1 (For table 2)
+
+### set up aggregate
+
+```{r expt1_lmer2}
 # looking at just inf trials
 # window: 1-4 seconds
 mss <- d %>%
@@ -65,18 +82,25 @@ mss <- d %>%
 mss$subid <- factor(mss$subid)
 mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
 mss$trial_type <- relevel(mss$trial_type, "cs")
+```
 
+### model
+
+```{r expt1_lmer2_model}
 simp.lm <- lmer(correct ~ age_group +
                 + (1 | subid) + (age_group | item),
-                data=mss)
+                data=mss) # more complex random effects fail to converge
 summary(simp.lm)
 ```
 
 We see significant main effect of age within inf trials, such that with increasing age, children's looking at the inferential target (a measure of their implicature computation) increases.
 
+
 # Experiment 2
 
-```{r}
+## lmer: effect of trial type, age, and window on accuracy in Expt 2 (Table 3)
+
+```{r expt2_lmer3}
 ##Experiment 2: prosody
 #aggregate data across subjects and items
 mss <- d %>%
@@ -90,19 +114,26 @@ mss <- d %>%
 mss$subid <- factor(mss$subid)
 mss$age_group <- as.factor(mss$age_group) # age as continuous
 mss$trial_type <- relevel(mss$trial_type, "cs")
+```
 
+### plot
+
+```{r expt2_lmer3_plot}
 ms <- mss %>%
   group_by(trial_type, age_group, window, subid) %>%
   summarise(correct = mean(correct, na.rm = TRUE))
 
-ms <- aggregate(correct ~ trial_type + age_group + window + subid, mss, mean)
 qplot(age_group, correct, col=trial_type, data=ms) + 
   facet_wrap(~window) +
   geom_hline(yintercept=.5,lty=2) +
-  geom_smooth(method="lm")
+  geom_smooth(method="lm", aes(group=trial_type))
+```
 
+### model
+
+```{r expt2_lmer3_model}
 simp.lm <- lmer(correct ~ age_group * trial_type * window
-                + (trial_type + window | subid) + (age_group + window | item), # (age_group + trial_type | item) fails to converge
+                + (trial_type + window | subid) + (age_group + window | item), 
                 data=mss)
 summary(simp.lm)
 anova(simp.lm)
@@ -114,7 +145,9 @@ Within Exp 2:
 
 What if we look at two experiments together, only at inference trials? We expect to see interaction between expt x window such that children had greater accuracy rate in inference trials in Exp 2 in the late window.
 
-```{r}
+## lmer: effect of age and window in inf trials in Expt 1 and 2 (Table 4)
+
+```{r expt2_lmer4}
 mss <- d %>%
   filter(age_group == "3" | age_group == "4") %>%
   filter((expt == "1" & t.crit > .78 & t.crit <= 3.62) |
@@ -129,18 +162,25 @@ mss$subid <- factor(mss$subid)
 mss$expt <- factor(mss$expt)
 mss$age_group <- as.factor(mss$age_group) # age as factor
 mss$trial_type <- relevel(mss$trial_type, "cs")
+```
 
+### plot 
+
+```{r expt2_lmer4_plot}
 ms <- aggregate(correct ~ expt + age_group + window + subid, mss, mean)
+levels(ms$expt) <- c("Expt 1", "Expt 2")
 qplot(window, correct, col=age_group, data=ms) + 
-  facet_wrap(expt~age_group) +
+  facet_grid(expt~age_group) +
   geom_hline(yintercept=.5,lty=2) +
-  geom_smooth(method="lm")
+  geom_smooth(method="lm", aes(group=1))
+```
 
+### model
+
+```{r expt2_lmer4_model}
 simp.lm <- lmer(correct ~ expt * age_group * window
-                + (window | subid) + (expt + age_group | item), 
+                + (window | subid) + (expt + age_group | item), # more complex random effects fail to converge
                 data=mss)
 summary(simp.lm)
 
 ```
-
-But we don't see it...
