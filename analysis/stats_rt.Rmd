@@ -1,9 +1,9 @@
 ---
-title: "simpimp0pros_rt"
+title: "simpimp CogSci stats - RT"
 output: html_document
 ---
 
-## reaction time
+## Expt 1: reaction time
 
 ```{r}
 rm(list = ls())
@@ -11,7 +11,6 @@ source("../analysis/helpers/useful.R")
 source("../analysis/helpers/et_helper.R")
 detach(package:plyr)
 library(dplyr)
-
 
 d1_1 <- read.csv("../data/simpimp_0pros_rt.csv")
 
@@ -30,12 +29,11 @@ mss$trial_type <- relevel(mss$trial_type, "cs")
 
 ms <- aggregate(rt ~ trial_type + age_group + subid, mss, mean)
 qplot(age_group, rt, col=trial_type, data=ms) + 
-  geom_hline(yintercept=.5,lty=2) + 
   geom_smooth(method="lm")
 
 simp.lm <- lmer(rt ~ age_group * trial_type 
                 + (1 | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
                 data=mss)
 summary(simp.lm)
-```
 
+```
