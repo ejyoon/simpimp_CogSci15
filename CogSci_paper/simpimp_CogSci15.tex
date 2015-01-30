@@ -11,15 +11,19 @@
 
 \title{Children's Online Processing of Ad-Hoc Implicatures}
  
-\author{{\large \bf Erica J. Yoon (ejyoon@stanford.edu)} \\
+\author{{\large \bf Erica J. Yoon} \\
+  \texttt{ejyoon@stanford.edu} \\
   Department of Psychology \\
   Stanford University
-  \AND {\large \bf Yunan Charles Wu (ywu15@wabash.edu)} \\
+  \And {\large \bf Yunan Charles Wu} \\
+  \texttt{ywu15@wabash.edu} \\
   Department of Psychology \\
   Wabash College
-  \AND {\large \bf Michael C. Frank (mcfrank@stanford.edu)} \\
+  \And {\large \bf Michael C. Frank} \\
+  \texttt{mcfrank@stanford.edu} \\
   Department of Psychology \\
   Stanford University}
+
 
 \begin{document}
 
@@ -59,7 +63,6 @@ Thus, in addition to replicating previous research on ad-hoc implicatures in the
 
 Parents and their 2- to 5-year-old children visiting Children's Discovery Museum in San Jose, CA, were invited to participate in a short video study. The current sample comprised of children who were exposed to English at least 75\% of the time as indicated by their parents. In addition, individual trials with more than 50\% missing gaze data were excluded from analysis, and only participants who completed at least half of the trials according to this criterion were included in the analysis. These exclusion criteria led to a final sample of 108 (out of 113 participants): 24 2-year-olds (M = 2:6, range 2;1--2;11, 10 girls), 28 3-year-olds (M = 3;5, range 3;1--3;11, 19 girls), 24 4-year-olds (M = 4;6, range 4;1--4;11, 13 girls), 32 5-year-olds (M = 5;4, range 5;1--5;9, 9 girls). Children were given a sticker for participating in the study. We also tested fourteen adult participants, undergraduate students recruited through Stanford Psychology credit pool. 
 
-\vspace{12pt}
 \subsubsection{Stimuli and Design}
 
 On each trial, participants saw two images: a target and distractor, which could either be an item with a single feature (e.g., a plate with only a carrot or only a banana), or an item with double features (e.g., a plate with a carrot and a banana). Each trial contained three phases: in the initial phase (8.5 seconds), two images were presented in silence for two seconds, then a pre-recorded voice said a sentence (e.g., ``Look at these plates. Elmo's plate has a carrot.''). Then, in the anticipatory phase (1.5 seconds), a chime sound played to induce participants' anticipatory gaze. In the following feedback phase (1.5 seconds), a character appeared next to the target with an amusing sound effect. This outcome served to keep the task engaging for participants.
@@ -69,13 +72,11 @@ There were three types of test trials (pictured in Figure \ref{fig:age}, bottom)
 There were two additional trial types, with semantically unambiguous targets: \emph{Control-double} trials looked identical to inference trials, but the target and distractor were switched, such that the double-feature item was the target and the single-feature item was the distractor, and the test sentence named the unique feature on the target. \emph{Control-single} trials presented two items that each had a unique single feature, and either could be the target. Children saw 4 inference, 4 control-double, and 4 control-single trials; adults saw 6 inference, 6 control-double, and 12 control-single trials. 
 There were six sets of item and feature types, and the features were named with nouns found on the  MacArthur-Bates Communicative Development Inventory word list \cite{fenson1994variability}. Two orders of the test trials were created, such that trial types and item types were counterbalanced and trial order was pseudo-randomized across the two orders.
 
-\vspace{12pt}
 \subsubsection{Procedure}
 
 Participants sat in a booster seat, approx. 60 cm away from the monitor of an SMI RED 120 Hz binocular remote eye-tracker. Participants were introduced to the task as watching a short video. The video began with a short Elmo video clip that lasted for 1-2 minutes, during which any necessary adjustments to the eye-tracker and participants' chair positions were made. The eye-tracker was then calibrated using a 2-point calibration and validation of the calibration points. Then participants were introduced to Sesame Street characters and told `Today, [they] will show us lots of fun things. Are you ready? Let's go!' Following the introduction, participants saw two gaze-contingent practice trials, with unambiguous targets that differed from the test items. Then children watched 16 test trials and adults watched 24 test trials, as well as 4 filler photos of children playing and 2 Elmo video clips, presented at a pseudo-random points between test trials. The video lasted approximately 8 minutes.
 
 \subsection{Results and Discussion}
-
 
 \begin{figure*}[t]
 \begin{center} 
@@ -92,6 +93,19 @@ For inference trials, children older than 4 showed robust looking to inferential
 One additional finding emerged: two-year-olds' looking at the target was below chance, rather than at chance, indicating that they tended to look more at distractors than targets ($t(23)  = 1.93$, $p = .066$) Hence, two-year-olds did not even seem to consider inferential targets and distractors as equally likely referents. Rather, they did not disengage from distractors relative to their baseline bias prior to hearing the target word. We return to this pattern in the General Discussion when we speculate about the sources for the developmental changes we observed. 
 
 We fit a linear mixed-effects model \footnote{All mixed-effects models were run using the lme4 package in R Studio Version 0.98.932. The random effects structure for this model was as follows: (trial type $|$ subid) + (age $|$ item)} to measure the effects of trial type (reference group: control-single) and age (as a continuous variable) on the proportion of children looking to the target between 1 and 4s after noun onset (Table \ref{tab:lmer1}). We selected this time window because participants would have to wait until the end of target noun (0.8 seconds on average) to know they should switch to the inferential target, given the absence of a disambiguating continuation (e.g., ``Elmo's plate has a carrot \emph{and banana}.''). Results of the mixed-effects model indicate significant main effects of trial type and age: participants looked to the target significantly less in inference trials compared to control-single trials, and across all trial types, participants' looking to target increased with age. 
+
+To look more closely at the effect of age within inference trials, we fit a linear mixed-effects model \footnote{The random effects structure for this model was as follows: (1 $|$ subid) + (age $|$ item)} to measure the effect of age on the proportion of children looking to the inferential target between the same time window (Table \ref{tab:lmer2}). Results indicate a significant main effect of age: participants looked toward the target at greater rates with increasing age.
+
+We next analyzed participants' reaction times \cite{fernald2008looking}: We isolated trials on which participants were looking at the distractor at the point of disambiguation, and measured the average length of time prior to a shift to the target. Looks to the target were slower and overall lower in proportion in inference trials compared to both control trial types across all age groups (Figure \ref{fig:rt}). A linear mixed-effects model on trials on which participants were looking at the distractor at the point of disambiguation \footnote{The random effects structure for this model was as follows: (1 $|$ subid) + (age $|$ item)} indicated significant main effects of trial type and age on the average time before switch to targets: switch to the target was slower in inferential trials compared to control trials, and the amount of time before switch to the target decreased as age increased. Hence, implicatures were generally slower and harder to process compared to the unambiguous semantic meanings, regardless of the participants' age. 
+
+\section{Experiment 2}
+
+\begin{figure}
+\begin{centering} 
+\includegraphics[width=3.2in]{figures/expt1-rt.pdf}
+\caption{\label{fig:rt} Average reaction times for first switches to target in trials in which participants were looking at the distractor (and not the target) at the target word onset.}
+\end{centering} 
+\end{figure}
 
 \begin{table}[b!]
 \caption{\label{tab:lmer1}  Coefficient estimates from mixed-effects models predicting proportion of looks to target in Experiment 1.} 
@@ -111,8 +125,6 @@ Age $\times$ Inference & .01 (.02) & .86 \\
 \end{center} 
 \end{table}
 
-To look more closely at the effect of age within inference trials, we fit a linear mixed-effects model \footnote{The random effects structure for this model was as follows: (1 $|$ subid) + (age $|$ item)} to measure the effect of age on the proportion of children looking to the inferential target between the same time window (Table \ref{tab:lmer2}). Results indicate a significant main effect of age: participants looked toward the target at greater rates with increasing age.
-
 \begin{table}[b!]
 \caption{\label{tab:lmer2}  Coefficient estimates from mixed-effects models predicting proportion of looks to target in inference trials in Experiment 1.} 
 \begin{center} 
@@ -120,16 +132,12 @@ To look more closely at the effect of age within inference trials, we fit a line
 \hline
 Predictor  &  Value (SE) & \emph{t}-value\\
 \hline
-Intercept  & .29 (.09) & 3.25 \\
-Age & .06 (.02) &  2.82 \\
+Intercept  & .36 (.05) & 6.65 \\
+Age & .06 (.01) &  3.96 \\
 \hline
 \end{tabular} 
 \end{center} 
 \end{table}
-
-We next analyzed participants' reaction times \cite{fernald2008looking}: We isolated trials on which participants were looking at the distractor at the point of disambiguation, and measured the average length of time prior to a shift to the target. Looks to the target were slower and overall lower in proportion in inference trials compared to both control trial types across all age groups (Figure \ref{fig:rt}). A linear mixed-effects model on trials on which participants were looking at the distractor at the point of disambiguation \footnote{The random effects structure for this model was as follows: (1 $|$ subid) + (age $|$ item)} indicated significant main effects of trial type and age on the average time before switch to targets: switch to the target was slower in inferential trials compared to control trials, and the amount of time before switch to the target decreased as age increased. Hence, implicatures were generally slower and harder to process compared to the unambiguous semantic meanings, regardless of the participants' age. 
-
-\section{Experiment 2}
 
 In Experiment 1, we found that children of 4 and above could compute implicatures given access to contextual alternatives. But children younger than 4 still struggled with implicature computation. In Experiment 2, we explored another factor that may improve children's performance: prosody. Contrastive stress---a change in pitch, characterized by an initial drop followed by a rise--- assists inference processing for both adults \cite{ito2008anticipatory} and preschool children \cite{kurumada1contextual}. For example, when preschoolers saw a picture of a zebra and a picture of an okapi that resembles a zebra, and heard ``It LOOKS like a zebra'' with a stress on the word ``look,'' they chose the picture of okapi if the context provided support. In the current experiment, we investigate whether a contrastive stress on the final noun (e.g., ``Elmo's plate has a CARROT'') in the inference trials would assist children in identifying the pragmatically-correct referent.
 
@@ -150,20 +158,6 @@ The stimuli, design and procedure were identical to Experiment 1, except for one
 
 
 \subsection{Results and Discussion}
-
-\begin{figure}
-\begin{centering} 
-\includegraphics[width=3.2in]{figures/expt1-rt.pdf}
-\caption{\label{fig:rt} Average reaction times for first switches to target in trials in which participants were looking at the distractor (and not the target) at the target word onset.}
-\end{centering} 
-\end{figure}
-
-\begin{figure}[t]
-\begin{center} 
-\includegraphics[width=3.2in]{figures/expt12-accuracy_inf.pdf}
-\caption{\label{fig:0prosbar} Looking to the target as a proportion of looking to the target and distractor in inference trials, averaged during two time windows (early: first half of the window between offset and end of trial, late: second half of the window).}
-\end{center} 
-\end{figure}
 
 \begin{table}[b!]
 \caption{\label{tab:lmer3}  Coefficient estimates from mixed-effects models predicting proportion of looks to target in Experiment 2.} 
@@ -188,6 +182,13 @@ Age $\times$ Inference $\times$ Window & -.03 (.07) & -.51 \\
 \end{tabular} 
 \end{center} 
 \end{table}
+
+\begin{figure}[t]
+\begin{center} 
+\includegraphics[width=3.2in]{figures/expt12-accuracy_inf.pdf}
+\caption{\label{fig:0prosbar} Looking to the target as a proportion of looking to the target and distractor in inference trials, averaged during two time windows (early: first half of the window between offset and end of trial, late: second half of the window).}
+\end{center} 
+\end{figure}
 
 \begin{table}[b!]
 \caption{\label{tab:lmer4}  Coefficient estimates from mixed-effects models predicting proportion of looks to target in Inference trials in Experiment 1 and 2.} 
