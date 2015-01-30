@@ -59,6 +59,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="t-tests" class="section level2">
 <h2>t-tests</h2>
 <p>T-tests to see whether children’s looking to target is above chance level</p>
+<div id="set-up" class="section level3">
+<h3>set up</h3>
 <pre class="r"><code># load
 rm(list = ls())
 source(&quot;../analysis/helpers/useful.R&quot;)</code></pre>
@@ -81,16 +83,22 @@ library(dplyr)</code></pre>
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code># read data
 d &lt;- read.csv(&quot;../data/simpimp_0pros-short.csv&quot;)</code></pre>
-<div id="experiment-1" class="section level3">
-<h3>Experiment 1</h3>
-<pre class="r"><code># 2y
-exp1.subs &lt;- d %&gt;%
+</div>
+</div>
+<div id="experiment-1" class="section level1">
+<h1>Experiment 1</h1>
+<div id="set-up-data" class="section level2">
+<h2>set up data</h2>
+<pre class="r"><code>exp1.subs &lt;- d %&gt;%
   filter(t.crit &gt;= 1 &amp; t.crit &lt;= 4) %&gt;%
   filter(age_group != &quot;adult&quot;) %&gt;%
   filter(expt == &quot;1&quot;) %&gt;%
   group_by(trial_type, age_group, subid) %&gt;%
-  summarise(correct = mean(correct, na.rm = TRUE))
-
+  summarise(correct = mean(correct, na.rm = TRUE))</code></pre>
+</div>
+<div id="yr" class="section level2">
+<h2>2 yr</h2>
+<pre class="r"><code># 2y
 t.test(subset(exp1.subs, subset=age_group==&quot;2&quot;&amp;trial_type==&quot;inf&quot;)$correct, mu=.5)</code></pre>
 <pre><code>## 
 ##  One Sample t-test
@@ -127,6 +135,9 @@ t.test(subset(exp1.subs, subset=age_group==&quot;2&quot;&amp;trial_type==&quot;i
 ## sample estimates:
 ## mean of x 
 ##    0.6675</code></pre>
+</div>
+<div id="yr-1" class="section level2">
+<h2>3 yr</h2>
 <pre class="r"><code># 3y
 t.test(subset(exp1.subs, subset=age_group==&quot;3&quot;&amp;trial_type==&quot;inf&quot;)$correct, mu=.5)</code></pre>
 <pre><code>## 
@@ -164,6 +175,9 @@ t.test(subset(exp1.subs, subset=age_group==&quot;3&quot;&amp;trial_type==&quot;i
 ## sample estimates:
 ## mean of x 
 ##    0.7663</code></pre>
+</div>
+<div id="yr-2" class="section level2">
+<h2>4 yr</h2>
 <pre class="r"><code># 4y
 t.test(subset(exp1.subs, subset=age_group==&quot;4&quot;&amp;trial_type==&quot;inf&quot;)$correct, mu=.5)</code></pre>
 <pre><code>## 
@@ -201,6 +215,9 @@ t.test(subset(exp1.subs, subset=age_group==&quot;4&quot;&amp;trial_type==&quot;i
 ## sample estimates:
 ## mean of x 
 ##    0.7725</code></pre>
+</div>
+<div id="yr-3" class="section level2">
+<h2>5 yr</h2>
 <pre class="r"><code># 5y
 t.test(subset(exp1.subs, subset=age_group==&quot;5&quot;&amp;trial_type==&quot;inf&quot;)$correct, mu=.5)</code></pre>
 <pre><code>## 
@@ -238,7 +255,6 @@ t.test(subset(exp1.subs, subset=age_group==&quot;5&quot;&amp;trial_type==&quot;i
 ## sample estimates:
 ## mean of x 
 ##     0.793</code></pre>
-</div>
 <div id="experiment-2" class="section level3">
 <h3>Experiment 2</h3>
 <pre class="r"><code>#Experiment 2: within each age group
@@ -249,9 +265,12 @@ exp2.subs &lt;- d %&gt;%
   filter(expt == &quot;2&quot;) %&gt;%
   mutate(window = ifelse(t.crit &gt; 1 &amp; t.crit &lt;= 2.6, &quot;early&quot;, &quot;late&quot;)) %&gt;%
   group_by(expt, trial_type, age_group, window, subid) %&gt;%
-  summarise(correct = mean(correct, na.rm = TRUE))
-
-t.test(subset(exp2.subs, subset=age_group==&quot;3&quot;&amp;trial_type==&quot;inf&quot;&amp;window==&quot;early&quot;)$correct, mu=.5)</code></pre>
+  summarise(correct = mean(correct, na.rm = TRUE))</code></pre>
+</div>
+</div>
+<div id="expt-2-3-4-yr-in-inference-trials-early-vs-late-window" class="section level2">
+<h2>Expt 2: 3 &amp; 4 yr in inference trials, early vs late window</h2>
+<pre class="r"><code>t.test(subset(exp2.subs, subset=age_group==&quot;3&quot;&amp;trial_type==&quot;inf&quot;&amp;window==&quot;early&quot;)$correct, mu=.5)</code></pre>
 <pre><code>## 
 ##  One Sample t-test
 ## 
