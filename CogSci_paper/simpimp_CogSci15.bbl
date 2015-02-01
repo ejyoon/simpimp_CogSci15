@@ -76,6 +76,32 @@ Clark, E\BPBI V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Cutler%
+\ \BBA {} Swinney%
+}{%
+Cutler%
+\ \BBA {} Swinney%
+}{%
+{\protect \APACyear {1987}}%
+}]{%
+cutler1987}
+\APACinsertmetastar {%
+cutler1987}%
+\begin{APACrefauthors}%
+Cutler, A.%
+\BCBT {}\ \BBA {} Swinney, D\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1987}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Prosody and the development of comprehension} {Prosody
+  and the development of comprehension}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Child Language}{14}{01}{145--167}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Davidson%
 , Amso%
 , Anderson%
@@ -135,38 +161,6 @@ Fenson, L.%
 \newblock
 \APACjournalVolNumPages{Monographs of the society for research in child
   development}{}{}{i--185}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Fernald%
-, Pinto%
-, Swingley%
-, Weinbergy%
-\BCBL {}\ \BBA {} McRoberts%
-}{%
-Fernald%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {1998}}%
-}]{%
-fernald1998rapid}
-\APACinsertmetastar {%
-fernald1998rapid}%
-\begin{APACrefauthors}%
-Fernald, A.%
-, Pinto, J\BPBI P.%
-, Swingley, D.%
-, Weinbergy, A.%
-\BCBL {}\ \BBA {} McRoberts, G\BPBI W.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1998}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Rapid gains in speed of verbal processing by infants in
-  the 2nd year} {Rapid gains in speed of verbal processing by infants in the
-  2nd year}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Psychological Science}{9}{3}{228--231}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -275,6 +269,38 @@ Huang, Y\BPBI T.%
 
 \bibitem [\protect \citeauthoryear {%
 Ito%
+, Jincho%
+, Minai%
+, Yamane%
+\BCBL {}\ \BBA {} Mazuka%
+}{%
+Ito%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+ito2012}
+\APACinsertmetastar {%
+ito2012}%
+\begin{APACrefauthors}%
+Ito, K.%
+, Jincho, N.%
+, Minai, U.%
+, Yamane, N.%
+\BCBL {}\ \BBA {} Mazuka, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Intonation facilitates contrast resolution: Evidence
+  from Japanese adults and 6-year olds} {Intonation facilitates contrast
+  resolution: Evidence from japanese adults and 6-year olds}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Memory and Language}{66}{1}{265--284}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ito%
 \ \BBA {} Speer%
 }{%
 Ito%
@@ -334,9 +360,9 @@ Kurumada%
 }{%
 {\protect \APACyear {2014}}%
 }]{%
-kurumada1contextual}
+kurumada2014}
 \APACinsertmetastar {%
-kurumada1contextual}%
+kurumada2014}%
 \begin{APACrefauthors}%
 Kurumada, C.%
 \end{APACrefauthors}%
@@ -495,6 +521,33 @@ Papafragou, A.%
   semantics--pragmatics interface}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Cognition}{86}{3}{253--282}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sekerina%
+\ \BBA {} Trueswell%
+}{%
+Sekerina%
+\ \BBA {} Trueswell%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+sekerina2012}
+\APACinsertmetastar {%
+sekerina2012}%
+\begin{APACrefauthors}%
+Sekerina, I\BPBI A.%
+\BCBT {}\ \BBA {} Trueswell, J\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Interactive processing of contrastive expressions by
+  Russian children} {Interactive processing of contrastive expressions by
+  russian children}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{First language}{32}{1-2}{63--87}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
