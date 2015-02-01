@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 JAN 2015 16:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 JAN 2015 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -310,7 +310,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
- [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Underfull \hbox (badness 1515) in paragraph at lines 50--51
+\OT1/ptm/m/it/10 hoc \OT1/ptm/m/n/10 im-pli-ca-tures, which de-pend on contextu
+ally-derived
+ []
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
@@ -326,29 +332,31 @@ Package pdftex.def Info: figures/expt1-accuracy.pdf used on input line 83.
 File: figures/expt1-rt.pdf Graphic file (type pdf)
 
 <use figures/expt1-rt.pdf>
-Package pdftex.def Info: figures/expt1-rt.pdf used on input line 105.
+Package pdftex.def Info: figures/expt1-rt.pdf used on input line 121.
 (pdftex.def)             Requested size: 231.26378pt x 147.67175pt.
 
 <figures/expt2-accuracy.pdf, id=117, 359.6811pt x 159.58937pt>
 File: figures/expt2-accuracy.pdf Graphic file (type pdf)
 
 <use figures/expt2-accuracy.pdf>
-Package pdftex.def Info: figures/expt2-accuracy.pdf used on input line 155.
+Package pdftex.def Info: figures/expt2-accuracy.pdf used on input line 157.
 (pdftex.def)             Requested size: 354.12144pt x 157.13191pt.
 
-<figures/expt12-accuracy_inf.pdf, id=118, 300.46393pt x 198.3083pt>
+Overfull \hbox (6.9663pt too wide) in paragraph at lines 166--184
+ [] 
+ []
+
+[4 <./figures/expt1-rt.pdf>]
+<figures/expt12-accuracy_inf.pdf, id=162, 300.46393pt x 198.3083pt>
 File: figures/expt12-accuracy_inf.pdf Graphic file (type pdf)
 
 <use figures/expt12-accuracy_inf.pdf>
-Package pdftex.def Info: figures/expt12-accuracy_inf.pdf used on input line 188
+Package pdftex.def Info: figures/expt12-accuracy_inf.pdf used on input line 193
 .
 (pdftex.def)             Requested size: 231.26378pt x 152.64037pt.
-
-Underfull \vbox (badness 5741) has occurred while \output is active []
-
- [4 <./figures/expt1-rt.pdf>] [5 <./figures/expt2-accuracy.pdf> <./figures/expt
-12-accuracy_inf.pdf>] (./simpimp_CogSci15.bbl
-Underfull \vbox (badness 1348) has occurred while \output is active []
+ [5 <./figures/expt2-accuracy.pdf> <./figures/expt12-accuracy_inf.pdf>] (./simp
+imp_CogSci15.bbl
+Underfull \vbox (badness 1558) has occurred while \output is active []
 
  [6])
 [7
@@ -361,7 +369,7 @@ Here is how much of TeX's memory you used:
  6959 multiletter control sequences out of 15000+600000
  40061 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,23p,1392b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,23p,1377b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips
 /base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -370,7 +378,7 @@ sy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
 al/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on simpimp_CogSci15.pdf (7 pages, 360139 bytes).
+Output written on simpimp_CogSci15.pdf (7 pages, 360554 bytes).
 PDF statistics:
  335 PDF objects out of 1000 (max. 8388607)
  237 compressed objects within 3 object streams
