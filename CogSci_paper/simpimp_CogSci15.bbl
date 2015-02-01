@@ -54,35 +54,6 @@ Barner, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Barner%
-, Chow%
-\BCBL {}\ \BBA {} Yang%
-}{%
-Barner%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2009}}%
-}]{%
-barner2009finding}
-\APACinsertmetastar {%
-barner2009finding}%
-\begin{APACrefauthors}%
-Barner, D.%
-, Chow, K.%
-\BCBL {}\ \BBA {} Yang, S\BHBI J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2009}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Finding one's meaning: A test of the relation between
-  quantifiers and integers in language development} {Finding one's meaning: A
-  test of the relation between quantifiers and integers in language
-  development}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Cognitive psychology}{58}{2}{195--219}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Clark%
 }{%
 Clark%
@@ -227,31 +198,6 @@ Fernald, A.%
 \newblock
 \APACjournalVolNumPages{Developmental psycholinguistics: On-line methods in
   children's language processing}{}{}{113--132}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Gerardi-Caulton%
-}{%
-Gerardi-Caulton%
-}{%
-{\protect \APACyear {2000}}%
-}]{%
-gerardi2000sensitivity}
-\APACinsertmetastar {%
-gerardi2000sensitivity}%
-\begin{APACrefauthors}%
-Gerardi-Caulton, G.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2000}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Sensitivity to spatial conflict and the development of
-  self-regulation in children 24--36 months of age} {Sensitivity to spatial
-  conflict and the development of self-regulation in children 24--36 months of
-  age}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Developmental Science}{3}{4}{397--404}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -525,34 +471,6 @@ Noveck, I\BPBI A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-O'Neill%
-\ \BBA {} Topolovec%
-}{%
-O'Neill%
-\ \BBA {} Topolovec%
-}{%
-{\protect \APACyear {2001}}%
-}]{%
-o2001two}
-\APACinsertmetastar {%
-o2001two}%
-\begin{APACrefauthors}%
-O'Neill, D\BPBI K.%
-\BCBT {}\ \BBA {} Topolovec, J\BPBI C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2001}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Two-year-old children's sensitivity to the referential
-  (in) efficacy of their own pointing gestures} {Two-year-old children's
-  sensitivity to the referential (in) efficacy of their own pointing
-  gestures}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Child Language}{28}{1}{1--28}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Papafragou%
 \ \BBA {} Musolino%
 }{%
@@ -604,35 +522,6 @@ Stiller, A.%
   implicature in preschool children}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Language Learning and Development}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Teresa~Guasti%
-\ \protect \BOthers {.}}{%
-Teresa~Guasti%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2005}}%
-}]{%
-teresa2005children}
-\APACinsertmetastar {%
-teresa2005children}%
-\begin{APACrefauthors}%
-Teresa~Guasti, M.%
-, Chierchia, G.%
-, Crain, S.%
-, Foppolo, F.%
-, Gualmini, A.%
-\BCBL {}\ \BBA {} Meroni, L.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2005}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Why children and adults sometimes (but not always)
-  compute implicatures} {Why children and adults sometimes (but not always)
-  compute implicatures}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Language and Cognitive Processes}{20}{5}{667--696}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
