@@ -24,7 +24,7 @@ mss <- d1_1 %>%
   summarise(rt = mean(t.crit.binned, na.rm = TRUE))
 
 mss$subid <- factor(mss$subid)
-mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
+mss$age_group <- scale(as.numeric(as.character(mss$age_group))) # age as continuous
 mss$trial_type <- relevel(mss$trial_type, "cs")
 
 ms <- aggregate(rt ~ trial_type + age_group + subid, mss, mean)
@@ -32,7 +32,7 @@ qplot(age_group, rt, col=trial_type, data=ms) +
   geom_smooth(method="lm")
 
 simp.lm <- lmer(rt ~ age_group * trial_type 
-                + (1 | subid) + (age_group | item), # (age_group + trial_type | item) fails to converge
+                + (1 | subid) + (age_group | item), 
                 data=mss)
 summary(simp.lm)
 
