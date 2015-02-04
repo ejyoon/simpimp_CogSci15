@@ -60,45 +60,9 @@ simp.lm <- lmer(correct ~ age_group * trial_type
 summary(simp.lm)
 ```
 
-Looks like we have main effects of age and trial type, but no interaction. Thus, across all trial types, there is a developmental trend of improved performance.
-
-What if we look only at inf trials?
-
-## lmer: effect of age on accuracy within inference trials in Expt 1 (For table 2)
-
-### set up aggregate
-
-```{r expt1_lmer2}
-# looking at just inf trials
-# window: 1-4 seconds
-mss <- d %>%
-  filter(t.crit >= 1 & t.crit <= 4) %>%
-  filter(age_group != "adult") %>%
-  filter(expt == "1") %>%
-  filter(trial_type == "inf") %>%
-  group_by(trial_type, age_group, subid, item) %>%
-  summarise(correct = mean(correct, na.rm = TRUE))
-
-mss$subid <- factor(mss$subid)
-mss$age_group <- as.numeric(as.character(mss$age_group)) # age as continuous
-mss$trial_type <- relevel(mss$trial_type, "cs")
-```
-
-### model
-
-```{r expt1_lmer2_model}
-simp.lm <- lmer(correct ~ age_group +
-                + (1 | subid) + (age_group | item),
-                data=mss) # more complex random effects fail to converge
-summary(simp.lm)
-```
-
-We see significant main effect of age within inf trials, such that with increasing age, children's looking at the inferential target (a measure of their implicature computation) increases.
-
-
 # Experiment 2
 
-## lmer: effect of trial type, age, and window on accuracy in Expt 2 (Table 3)
+## lmer: effect of trial type, age, and window on accuracy in Expt 2 
 
 ```{r expt2_lmer3}
 ##Experiment 2: prosody
@@ -125,7 +89,7 @@ ms <- mss %>%
   summarise(correct = mean(correct, na.rm = TRUE))
 
 qplot(age_group, correct, col=trial_type, data=ms) + 
- # facet_wrap(~window) +
+  # facet_wrap(~window) +
   geom_hline(yintercept=.5,lty=2) +
   geom_smooth(method="lm", aes(group=trial_type))
 ```
@@ -140,11 +104,6 @@ summary(simp.lm)
 
 ```
 
-Within Exp 2:
-- main effect of trial type (inference)
-- NO significant interaction between inference x late window
-
-What if we look at two experiments together, only at inference trials? We expect to see interaction between expt x window such that children had greater accuracy rate in inference trials in Exp 2 in the late window.
 
 ## lmer: effect of age and window in inf trials in Expt 1 and 2 (Table 4)
 
@@ -185,3 +144,39 @@ simp.lm <- lmer(correct ~ expt * age_group * window
 summary(simp.lm)
 
 ```
+
+
+Without window as a factor
+
+```{r expt2_lmer5}
+mss <- d %>%
+  filter(age_group == "3" | age_group == "4") %>%
+  filter((expt == "1" & t.crit > .78 & t.crit <= 3.62) |
+           (expt == "2" & t.crit > 1.16 & t.crit <= 4)) %>%
+#  filter(trial_type == "inf") %>%
+#  mutate(window = ifelse(expt =="1",
+#    ifelse(t.crit > .78 & t.crit <= 2.2, "early", "late"), ifelse(t.crit > 1.16 & t.crit <= 2.58, "early", "late"))) %>%
+  group_by(expt, trial_type, age_group, subid, item) %>%
+  summarise(correct = mean(correct, na.rm = TRUE))
+
+mss$subid <- factor(mss$subid)
+mss$expt <- factor(mss$expt)
+mss$age_group <- as.factor(mss$age_group) # age as factor
+mss$trial_type <- relevel(mss$trial_type, "cs")
+```
+
+```{r expt2_lmer5_model}
+
+# looking at all trial types
+simp.lm <- lmer(correct ~ expt * age_group * trial_type
+                + (trial_type | subid) + (expt + age_group + trial_type | item), 
+                data=mss)
+summary(simp.lm)
+
+# looking at just inf trials
+simp.lm <- lmer(correct ~ expt * age_group
+                + (1 | subid) + (expt + age_group | item), 
+                data=subset(mss, trial_type == "inf"))
+summary(simp.lm)
+```
+

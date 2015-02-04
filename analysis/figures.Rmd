@@ -137,7 +137,7 @@ ggplot(subset(ms, trial_type == "inf"),
 ```{r}
 mss <- d %>%
   filter(age_group == "3" | age_group == "4") %>%
-  filter((expt == "1" & t.crit > -1 & t.crit <= 3.62) |
+  filter((expt == "1" & t.crit > -1 & t.crit <= 3.6) |
            (expt == "2" & t.crit > -1 & t.crit <= 4)) %>%
   filter(trial_type == "inf") %>%
   group_by(expt, trial_type, age_group, t.crit.binned, subid, item) %>%
@@ -154,22 +154,22 @@ ms$expt <- as.factor(ms$expt)
 levels(ms$expt) <- c("Expt 1", "Expt 2")
 levels(ms$age_group) <- c("2", "3-year-olds", "4-year-olds", "5", "adult")
 
-p <- ggplot(subset(ms, trial_type == "inf"), aes(x = t.crit.binned, y = correct, colour = age_group)) +
+p <- ggplot(subset(ms, trial_type == "inf"), aes(x = t.crit.binned, y = correct, colour = expt)) +
   geom_line() +
-  facet_grid(.~expt, scales = "free_x") +
+  facet_grid(.~age_group) +
   geom_vline(xintercept=0,lty=3) + 
   geom_hline(yintercept=.50,lty=4) + 
   theme(legend.position="none") +
   xlab("Time (s)") + ylab("Proportion correct looking") + 
   scale_x_continuous(expand = c(0,0)) + 
-  scale_y_continuous(limits=c(0,1),expand = c(0,0)) +
-  scale_colour_manual(values=c("#909000", "#18a860"))
+  scale_y_continuous(limits=c(0,1),expand = c(0,0))
+  # scale_colour_manual(values=c("#909000", "#18a860"))
 
-vline.data <- data.frame(z = c(.78, 1.16), expt = c("Expt 1","Expt 2"))
-vline.data2 <- data.frame(z = c(2.2, 2.58), expt = c("Expt 1","Expt 2"))
-expt1 <- data.frame(expt = "Expt 1")
-expt2 <- data.frame(expt = "Expt 2")
-p + geom_vline(aes(xintercept = z), vline.data, lty=3) +
-  geom_vline(aes(xintercept = z), vline.data2, lty=3) +
-  geom_dl(aes(label=age_group),method="smart.grid")
+#vline.data <- data.frame(z = c(.78, 1.16), expt = c("Expt 1","Expt 2"))
+#vline.data2 <- data.frame(z = c(2.2, 2.58), expt = c("Expt 1","Expt 2"))
+#expt1 <- data.frame(expt = "Expt 1")
+#expt2 <- data.frame(expt = "Expt 2")
+p + geom_dl(aes(label=expt),method="smart.grid")
+  # + geom_vline(aes(xintercept = z), vline.data, lty=3) +
+  # geom_vline(aes(xintercept = z), vline.data2, lty=3) +
 ```

@@ -14,7 +14,7 @@ library(dplyr)
 
 d1_1 <- read.csv("../data/simpimp_0pros_rt.csv")
 
-# stats for rt
+# Expt 1: stats for rt
 ms <- aggregate(t.crit.binned ~ age_group + trial_type,
                   data = d1_1, mean)
 mss <- d1_1 %>%
@@ -37,3 +37,32 @@ simp.lm <- lmer(rt ~ age_group * trial_type
 summary(simp.lm)
 
 ```
+
+For Expt 2:
+
+```{r}
+# Expt 1: stats for rt
+ms <- aggregate(t.crit.binned ~ age_group + trial_type,
+                  data = d1_1, mean)
+mss <- d1_1 %>%
+  filter(age_group != "adult") %>%
+  filter(expt == "2") %>%
+  group_by(trial_type, age_group, subid, item) %>%
+  summarise(rt = mean(t.crit.binned, na.rm = TRUE))
+
+mss$subid <- factor(mss$subid)
+mss$age_group <- as.factor(mss$age_group) # age as continuous
+mss$trial_type <- relevel(mss$trial_type, "cs")
+
+ms <- aggregate(rt ~ trial_type + age_group + subid, mss, mean)
+qplot(age_group, rt, col=trial_type, data=ms) + 
+  geom_smooth(method="lm", aes(group = trial_type))
+
+simp.lm <- lmer(rt ~ age_group * trial_type 
+                + (1 | subid) + (age_group | item), 
+                data=mss)
+summary(simp.lm)
+
+```
+
+

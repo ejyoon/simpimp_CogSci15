@@ -82,7 +82,7 @@ exp2.subs <- d %>%
   filter(trial_type == "inf") %>%
   filter(expt == "2") %>%
   mutate(window = ifelse(t.crit > 1 & t.crit <= 2.6, "early", "late")) %>%
-  group_by(expt, trial_type, age_group, window, subid) %>%
+  group_by(expt, trial_type, age_group, subid) %>%
   summarise(correct = mean(correct, na.rm = TRUE))
 ```
 
@@ -94,6 +94,10 @@ t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="early"
 t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf"&window=="late")$correct, mu=.5)
 t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="early")$correct, mu=.5)
 t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf"&window=="late")$correct, mu=.5)
+
+#without window
+t.test(subset(exp2.subs, subset=age_group=="3"&trial_type=="inf")$correct, mu=.5)
+t.test(subset(exp2.subs, subset=age_group=="4"&trial_type=="inf")$correct, mu=.5)
 ```
 
 
